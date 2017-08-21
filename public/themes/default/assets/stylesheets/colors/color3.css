@@ -1,0 +1,114 @@
+/**
+  * Color
+  * Border Color
+  * Background Color
+  * Shadow Color
+*/
+
+/* Color
+-------------------------------------------------------------- */
+#mainnav .menu .has-sub:hover:before,
+a:hover,
+.tp-caption.color-full .title.main-color-1,
+.flat-choose-us .name-toggle .title,
+.flat-blog .name-blog .title,
+#mainnav.v1 > ul > li > a:hover,
+.event-classic-item .price,
+.single-course-detail .course-speaker .media-body .main-color-2:hover,
+.course-single .single-course-detail .course-detail .text.map-link,
+.single-event-meta .event-action .element-pad.v1 .price,
+.project-listing .filter-cat.v2 li.active a, .project-listing .filter-cat.v2 li:hover,
+.breadcrumbs ul li a:hover
+ {
+	color: #74b3b2;
+}
+
+/* Border Color
+-------------------------------------------------------------- */
+.btn-primary,
+.flat-university .button-university a.color-v2,
+.flat-accordion .toggle-title:hover,
+.flat-accordion .toggle-title.active,
+.tp-banner-container.v1 .tp-caption.flat-button,
+.flat-teaser-wrapper .post-wrapper .flat-button.color-v2,
+.flat-smarter .post-wrapper .flat-button.color-v2,
+.flat-future .post-future .flat-button.color-v2,
+.widget-nav-menu .widget-inner ul li a:hover,
+.single-event-meta .event-action .element-pad .form-control:focus,
+.single-event-meta .event-action .element-pad.sold-out .flat-button,
+.single-course-detail .content-content .course-cta a,
+.flat-404 .single-page-content .main-color-1-border,
+.post-contact .contact-form .submit-wrap button.flat-button.style-v1,
+.sw-even a:hover
+ {
+	border-color: #74b3b2;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+#mainnav .submenu li:hover,
+#mainnav > ul > li:after,
+.navbar.menu-top .submenu li:hover,
+.header-inner-pages .top,
+.item-thumbnail:hover .thumbnail-hoverlay,
+.btn-primary,
+.flat-row .flat-fluid,
+.flat-university .button-university a.color-v2,
+.flat-events .grid-item.color-full,
+.flat-accordion .toggle-title:hover,
+.flat-accordion .toggle-title.active,
+.thumbnail-overlay,
+.featured-causes .owl-controls .owl-dots .owl-dot.active span,
+.featured-causes .owl-controls .owl-dots .owl-dot:hover span,
+.widget-text .un-icon:hover,
+.switcher-container h2 a,
+.flat-icon .iconbox.left .box-header,
+.tp-banner-container.v1 .tp-caption.flat-button,
+.icon-post.v1 .iconbox.center .box-header,
+.flat-teaser-wrapper .post-wrapper .flat-button.color-v2,
+.flat-smarter .post-wrapper .flat-button.color-v2,
+.flat-future .post-future .flat-button.color-v2,
+.widget-nav-menu .widget-inner ul li a:hover,
+.event-classic-item .item-thumbnail:hover a:before,
+.single-event-meta .event-action .element-pad.sold-out .flat-button,
+.single-course-detail .content-content .course-cta a,
+.course-list-table .courses-list .table .main-color-1-bg,
+.course-list-table.table > tbody > tr:hover > td,
+.content-course .course-description .course-action .flat-button,
+.thumbnail-overflow .comment-block,
+.project-item:hover .project-item-title,
+.project-item:hover .project-item-excerpt,
+.post-contact .contact-form .submit-wrap button.flat-button.style-v1,
+.sw-even a:hover,
+.menu-hover {
+	background-color: #74b3b2;
+}
+
+
+
+/*
+-------------------------------------------------------------- */
+.flat-reviews .flat-causes .item .title-testimonial .post-title .title-post,
+.single-course-detail .course-speaker .media-body .main-color-2,
+.flat-404 .single-page-content .main-color-2 {
+	color: #568d8c;
+}
+
+.header,
+.btn-primary:hover,
+.thumbnail-overflow .date-block {
+	background-color: #568d8c;
+}
+
+.btn-primary:hover {
+	border-color: #568d8c;
+}
+
+.flat-university .button-university a:hover {
+	background-color: #fff;
+	border-color: #fff;
+}
+
+#mainnav.v2 > ul > li > a:hover {
+	color: #fff;
+}

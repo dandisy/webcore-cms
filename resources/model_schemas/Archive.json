@@ -1,0 +1,145 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "judul",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "tanggal",
+        "dbType": "date",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "jenis_informasi",
+        "dbType": "string",
+        "htmlType": "select,opsi:1,osi2:2",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "asal",
+        "dbType": "string",
+        "htmlType": "select,opsi:1,osi2:2",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "bentuk_informasi",
+        "dbType": "string",
+        "htmlType": "select,opsi:1,osi2:2",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "keterangan",
+        "dbType": "text",
+        "htmlType": "textarea-rte",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "file",
+        "dbType": "string",
+        "htmlType": "file-manager",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "verified",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "verified_by",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "created_by",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]

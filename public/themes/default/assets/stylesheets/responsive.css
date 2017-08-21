@@ -1,0 +1,621 @@
+	/* Media Queries
+	-------------------------------------------------------------- */
+	@media only screen and (max-width: 1500px) {
+	}
+
+	@media only screen and (max-width: 1366px) {
+		
+
+	}
+
+	/* Smaller than standard 1200 */
+	@media only screen and (max-width: 1199px) {
+		.cactus-rev-slider-default .tp-caption {
+		    width: 1140px !important;
+		    margin-left: -570px !important;
+		}
+
+		.header-overlay-content.header-overlay-scroller .un-post-scroller {
+		    z-index: 9999;
+		}
+
+		.flat-events .grid-item.color-full {
+		    height: 286px;
+		}
+
+		.flat-events .grid-item .grid-item-content .title {
+		    font-size: 36px;
+		}
+
+		.post-scroller-carousel {
+		    max-height: 545px;
+		}
+	}
+
+	/* Smaller than standard 992 */
+	@media only screen and (max-width: 991px) {
+
+		.header .header-wrap .show-search,
+		.header .header-wrap .cart,
+		.mainnav,
+		.top .navbar.menu-top,
+		.main-menu {
+			display: none;
+		}
+
+		.header-inner-pages .top .navbar-right {
+		    float: right !important;
+		}
+
+		.menu-hover {
+			float: left;
+		}
+
+		.header-inner-pages,
+		.menu-hover {
+			display: block;
+		}
+
+		.wrap-slider .header {
+			position: relative;
+		}
+
+		.header.v2 .logo a {
+			height: 100px;
+			line-height: 100px;
+		}
+
+		.header .wrap-icon-nav {
+			display: block;
+		}
+
+		.btn-menu {
+			display: block;
+			line-height: 60px;
+			margin: 20px 20px;
+		}
+
+		.wrap-slider .header .header-wrap {
+			border: none;
+		}
+
+		.header .logo {
+			float: none;
+			text-align: center;
+		}
+
+		.tp-caption.color-full {
+			display: none;
+		}
+		
+		.post-scroller-wrap {
+			display: none;
+			padding: 15px;
+		    background: #fff;
+		}
+
+		.header-content-scroller .header-overlay-content .un-post-scroller {
+		    padding: 20px 5px;
+		}
+
+		.flat-fluid .post {
+			margin-bottom: 50px;
+		}
+
+		.box-university .item-post {
+			margin-bottom: 40px;
+		}
+
+		.flat-events .grid-item {
+			width: 50%;
+		}
+
+		.flat-events .grid-item.color-full {
+			height: 438px;
+		}
+
+		.flat-events .grid-item .grid-item-content .title {
+			font-size: 48px;
+		}
+
+		.flat-choose-us .flat-accordion {
+			margin-bottom: 60px;
+		}
+
+		.item-content {
+			border: none;
+		}
+
+		.content-pad {
+			padding-bottom: 15px;
+		}
+
+		.widget-inner {
+		    padding-bottom: 30px;
+		}
+
+		#bottom .widget-flickr ul li {
+			width:90px;
+		}
+
+		.copyright {
+		    text-align: center;
+		    margin-top: 20px;
+		}
+
+		#bottom-nav .footer-social .social-list {
+			text-align: center;
+			float: none;
+			margin-top: 20px;
+		}
+
+		.tp-banner-container.v1 {
+			height: 393px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v1 .title {
+			font-size: 43px;
+			line-height: 51px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v2 .content {
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v1 .title.v1 {
+			font-size: 41px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v2 .content.v1 {
+			font-size: 14px; 
+			line-height: 27px;
+		}
+
+		.flat-icon .iconbox {
+			width: 100%;
+		}
+
+		.flat-icon .iconbox.v1 {
+			margin-bottom: 30px;
+		}
+
+		.icon-post {
+			padding-bottom: 30px;
+		}
+
+		.flat-information .flat-button {
+			margin-bottom: 40px;
+		}
+
+		.flat-lecturers .thumb-lecturers {
+			margin-bottom: 45px;
+		}
+
+		.iconbox.center {
+			width: 100%;
+		}
+
+		.iconbox.center {
+			margin-bottom: 40px;
+		}
+
+		.flat-teaser-wrapper .thumb-wrapper {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.flat-blog {
+			padding: 0 15px;
+		}
+
+		.footer .section-inner {
+			padding: 40px 15px;
+		}
+
+		.thumbnail-overflow {
+		    left: 0px;
+		}
+
+		.project-listing .project-portfolio .item {
+			width: 100%;
+		}
+
+		.flat-row.padding-small-v1 .project-listing {
+			padding-bottom: 15px;
+		}
+
+		.header-overlay-content {
+			z-index: -1;
+		}
+
+		.flat-university .button-university a,
+		.flat-university .button-university p {
+			display: block;
+		}
+
+		.flat-smarter .flat-thumb {
+			margin-bottom: 40px;
+		}
+
+		.menu-hover {
+			overflow: hidden;
+			background-color: #179bd7;
+		}
+
+		.menu-hover .btn-menu {
+		    margin: 12px 20px;
+		}
+
+		#mainnav-mobi {
+			position: absolute;
+			top: 40px;
+			left: 0;
+		}
+
+		.header.v2 .header-wrap .logo a,
+		.header.v2 .header-wrap .logo .callout-text {
+			display: block;
+		}
+
+		.header.v2 .header-wrap .logo .navbar-right {
+			float: none;
+			text-align: center;
+		}
+
+		.posts-carousel.v2 .owl-theme .owl-controls .owl-nav div.owl-next {
+		    right: 15px;
+		    top: 7%;
+		}
+
+		.posts-carousel.v2 .owl-theme .owl-controls .owl-nav div.owl-prev {
+			left: 10px;
+		    top: 7%;
+		}
+
+		.style-margin .post-wrap .flat-event {
+		    padding: 0 5px;
+		}
+
+		.flat-carousel.v2 .posts-carousel.v3 {
+			margin-bottom: 40px;
+		}
+
+		.flat-carousel.v3 .posts-carousel.v4 {
+			margin-bottom: 40px;
+		}
+
+		.flat-carousel.v3 .posts-carousel.v4 .flat-event {
+			padding: 0 25px;
+		}
+
+		.posts-carousel.v4 .owl-theme .owl-controls .owl-nav div.owl-next {
+		    right: 30px;
+		    top: 37%;
+		}
+
+		.posts-carousel.v4 .owl-theme .owl-controls .owl-nav div.owl-prev {
+		    left: 30px;
+		    top: 37%;
+		}
+
+		.related-course .cr-content .related-item {
+			overflow: hidden;
+		}
+
+		.breadcrumbs {
+		    display: none;
+		}
+
+		.course-list-table {
+			margin-bottom: 50px;
+		}
+
+		.page-title {
+			padding: 33px 0;
+		}
+
+		.project-listing .project-portfolio.v1 .item .item-content {
+			padding: 20px;
+		}
+
+		.flat-row,
+		.flat-row .flat-fluid,
+		.flat-row.full-color-v1,
+		.flat-row.padding-v2 {
+			padding: 40px 0;
+		}
+
+		.flat-information {
+		    padding-bottom: 40px;
+		    margin-bottom: 40px;
+		}
+
+		.page-title.parallax1,
+		.flat-row.padding-top,
+		.flat-row.full-color,
+		.flat-row.pd125,
+		.page-title.parallax4,
+		.page-title.parallax5,
+		.flat-row.full-color-v2,
+		.page-title.parallax1.v1,
+		.page-title.parallax6,
+		.page-title.parallax5.v1,
+		.flat-row.padding-110,
+		.flat-row.full-color-v3,
+		.flat-row.padding-115,
+		.flat-row.padding-80,
+		.flat-row.padding-big {
+			padding: 60px 0;
+		}
+
+		.flat-row.color-full {
+			padding: 60px 0 35px;
+		}
+
+		.page-title.parallax3 {
+			padding: 80px 0;
+		}
+
+		.owl-theme .owl-controls .owl-nav div.owl-next,
+		.posts-carousel.v1 .owl-theme .owl-controls .owl-nav div.owl-next {
+			right: 0;
+		}
+
+		.owl-theme .owl-controls .owl-nav div.owl-prev,
+		.posts-carousel.v1 .owl-theme .owl-controls .owl-nav div.owl-prev {
+			left: -4px;
+		}
+
+		.flat-business .box-icon .icon-business {
+			width: 33.33%;
+		}
+
+		.flat-row.color-full .flat-business {
+			margin-bottom: 40px;
+		}
+
+		.flat-team .post-wrap .member-item {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		.flat-team .post-wrap .member-item:last-child {
+			margin-bottom: 0;
+		}
+
+		.flat-team .post .title,
+		.flat-team .post.v1 .title {
+			margin-bottom: 50px;
+		}
+
+		.flat-clients .title-clients .title {
+			margin-bottom: 50px;
+		}
+
+		.flat-clients .thumb-clients .item {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.flat-future .post-future {
+			margin-bottom: 40px;
+		}
+
+		.flat-banner .item {
+			margin-bottom: 15px;
+		}
+
+		.flat-banner .item {
+			width: 100%;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+
+		.flat-banner .item:last-child {
+			margin-bottom: 0;
+		}
+
+		.page-title.parallax3.padding-185 {
+			padding: 100px 0;
+		}
+
+		.flat-row.padding-big .flat-blog {
+			padding: 0;
+		}
+
+		.member-single-post .item-thumbnail {
+			margin-bottom: 15px;
+		}
+
+		.project-listing .project-portfolio .item:last-child {
+			margin-bottom: 0;
+		}
+
+		.post-contact .contact-form {
+			margin-bottom: 30px;
+		}
+
+		.post-contact .container-fluid #map {
+			height: 100px;
+		}
+
+		.top-search.show {
+			top: 40px;
+		}
+
+	}
+
+	/* Tablet Landscape */
+	 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+	}
+
+	/* Tablet Portrait Size */
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		.thumbnail-overflow {
+		    left: 0px;
+		}
+	}
+
+	/* All Mobile Sizes */
+	@media only screen and (max-width: 767px) {
+		.thumbnail-overflow {
+		    left: 0px;
+		}
+
+		.flat-events .grid-item {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+
+		.page-title.parallax2 {
+		    padding: 100px 0;
+		}
+
+		.flat-reviews .item {
+			padding: 0;
+		}
+
+		.project-listing .filter-cat {
+			text-align: center;
+		}
+
+		.flat-corporate .post {
+			margin-bottom: 40px;
+		}
+
+		#mainnav-mobi.v1 > ul > li > a i {
+		    margin-right: 5px;
+		    font-size: 16px;
+		}
+
+		.header.v1 .logo {
+			float: none;
+		}
+
+		.flat-row .flat-fluid.padding-95 {
+			padding: 60px 0;
+		}
+
+		.un-separator {
+		    margin-bottom: 20px;
+		}
+
+		.widget.widget-flickr {
+			padding-bottom: 0;
+		}
+
+	}
+
+	/* Mobile Landscape Size */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		.thumbnail-overflow {
+		    left: 0px;
+		}
+
+		.flat-events .grid-item {
+			width: 100%;
+		}
+
+	}
+
+	/* Mobile Portrait Size */
+	@media only screen and (max-width: 479px) {
+		.thumbnail-overflow {
+		    left: 0px;
+		}
+
+		.tp-banner-container.v1 {
+		    height: 185px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v1 .title {
+		    font-size: 21px;
+		    line-height: 22px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v2 .content {
+		    font-size: 6px;
+		    line-height: 10px;
+		}
+			
+		.tp-banner-container.v1 .tp-caption.v1 .title.v1 {
+			font-size: 19px;
+			line-height: 24px;
+		}
+
+		.tp-banner-container.v1 .tp-caption.v2 .content.v1 {
+		    font-size: 6px;
+		    line-height: 13px;
+		}
+
+		.page-title.parallax2.v1 {
+			padding: 100px 0;
+		}
+
+		#header.v2 .callout-text > p {
+			border-left: none;
+			padding-left: 0;
+			margin-left: 0; 
+		}
+
+		#header.v2 .logo {
+			line-height: 70px;
+		}
+
+		#header.v2 .callout-text {
+			overflow: inherit;
+			height: 120px;
+		}
+
+		.course-list-table.table>thead>tr>th,
+		.course-list-table.table>tbody>tr>th,
+		.course-list-table.table>tfoot>tr>th,
+		.course-list-table.table>thead>tr>td,
+		.course-list-table.table>tbody>tr>td,
+		.course-list-table.table>tfoot>tr>td {
+			padding: 12px;
+		}
+
+		.project-listing .project-portfolio.v1 .item {
+			width: 100%;
+		}
+
+		.flat-university .box-university {
+			margin-bottom: 40px;
+		}
+
+		.owl-theme .owl-controls .owl-nav div.owl-next {
+			right: 15px;
+		}
+
+		.posts-carousel.v1 .owl-theme .owl-controls .owl-nav div.owl-next {
+			right: 25px;
+		}
+
+		.owl-theme .owl-controls .owl-nav div.owl-prev {
+			left: 11px;
+		}
+
+		.posts-carousel.v1 .owl-theme .owl-controls .owl-nav div.owl-prev {
+			left: 25px;
+		}
+	
+	}
+
+	@media (max-width: 320px) {	
+		.thumbnail-overflow {
+		    left: 0px;
+		}
+
+		.course-list-table.table>thead>tr>th,
+		.course-list-table.table>tbody>tr>th,
+		.course-list-table.table>tfoot>tr>th,
+		.course-list-table.table>thead>tr>td,
+		.course-list-table.table>tbody>tr>td,
+		.course-list-table.table>tfoot>tr>td {
+			padding: 6px;
+		}
+	}
+

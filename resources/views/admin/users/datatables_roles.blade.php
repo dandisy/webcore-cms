@@ -1,0 +1,1 @@
+{!! $role_user['role_id'] !!}
