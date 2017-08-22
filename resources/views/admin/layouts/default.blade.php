@@ -54,7 +54,7 @@
         }
     </style>
 </head>
-<body id="app-layout" class="skin-red sidebar-mini">
+<body id="app-layout" class="skin-blue sidebar-mini">
     {{--<nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
