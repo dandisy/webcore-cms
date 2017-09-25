@@ -7,43 +7,15 @@
 
 <li class="header">PUBLISH</li>
 
-<li class="{{ Request::is('admin/information*') ? 'active' : '' }}">
-    <a href="{!! route('information.index') !!}"><i class="fa fa-info-circle"></i><span>Informasi</span></a>
-</li>
-
-<li class="{{ Request::is('admin/regulations*') ? 'active' : '' }}">
-    <a href="{!! route('regulations.index') !!}"><i class="fa fa-institution"></i><span>Regulasi</span></a>
-</li>
-
-<li class="{{ Request::is('admin/archives*') ? 'active' : '' }}">
-    <a href="{!! route('archives.index') !!}"><i class="fa fa-edit"></i><span>Arsip</span></a>
-</li>
-
 <li class="{{ Request::is('admin/pages*') ? 'active' : '' }}">
     <a href="{!! route('pages.index') !!}"><i class="fa fa-sticky-note"></i><span>Pages</span></a>
 </li>
 
-{{--<li class="{{ Request::is('components*') ? 'active' : '' }}">
-    <a href="{!! route('components.index') !!}"><i class="fa fa-puzzle-piece"></i><span>Components</span></a>
-</li>--}}
-
 <li class="header">SERVICE</li>
 
-<li class="{{ Request::is('admin/requests*') ? 'active' : '' }}">
-    <a href="{!! route('requests.index') !!}"><i class="fa fa-send"></i><span>Permohonan</span></a>
-</li>
-
-<li class="{{ Request::is('admin/exceptions*') ? 'active' : '' }}">
-    <a href="{!! route('exceptions.index') !!}"><i class="fa fa-exclamation-circle"></i><span>Keberatan</span></a>
-</li>
-
-<li class="{{ Request::is('admin/responses*') ? 'active' : '' }}">
-    <a href="{!! route('responses.index') !!}"><i class="fa fa-flag"></i><span>Tanggapan</span></a>
-</li>
-
-<li class="{{ Request::is('admin/faqs*') ? 'active' : '' }}">
-    <a href="{!! route('faqs.index') !!}"><i class="fa fa-question"></i><span>Faqs</span></a>
-</li>
+{{--<li class="{{ Request::is('messages*') ? 'active' : '' }}">
+    <a href="{!! route('messages.index') !!}"><i class="fa fa-edit"></i><span>Messages</span></a>
+</li>--}}
 
 <li class="header">ARRANGE</li>
 
@@ -53,20 +25,8 @@
 
 <li class="header">MASTER</li>
 
-<li class="{{ Request::is('admin/types*') ? 'active' : '' }}">
-    <a href="{!! route('types.index') !!}"><i class="fa fa-edit"></i><span>Types</span></a>
-</li>
-
 <li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
     <a href="{!! route('categories.index') !!}"><i class="fa fa-edit"></i><span>Categories</span></a>
-</li>
-
-<li class="{{ Request::is('admin/formats*') ? 'active' : '' }}">
-    <a href="{!! route('formats.index') !!}"><i class="fa fa-edit"></i><span>Formats</span></a>
-</li>
-
-<li class="{{ Request::is('admin/origins*') ? 'active' : '' }}">
-    <a href="{!! route('origins.index') !!}"><i class="fa fa-edit"></i><span>Origins</span></a>
 </li>
 
 <li class="header">MANAGE</li>

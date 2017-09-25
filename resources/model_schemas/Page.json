@@ -57,7 +57,7 @@
     {
         "name": "status",
         "dbType": "string",
-        "htmlType": "select,pending:1,publish:2",
+        "htmlType": "select,Pending:pending,Publish:publish",
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -66,14 +66,14 @@
         "inIndex": true
     },
     {
-        "name": "components",
-        "dbType": "string",
-        "htmlType": "select-multi,component1:1,component2:2,component3:3",
+        "name": "created_by",
+        "dbType": "integer",
+        "htmlType": "text",
         "validations": "",
         "searchable": true,
         "fillable": true,
         "primary": false,
-        "inForm": true,
+        "inForm": false,
         "inIndex": true
     },
     {

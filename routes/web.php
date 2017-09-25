@@ -32,16 +32,6 @@ Route::get('/admin', function () {
     }*/
 });
 
-Route::get('requests/index', 'RequestController@index');
-Route::get('requests/create', 'RequestController@create');
-Route::post('requests/create', 'RequestController@create');
-Route::post('requests/store', 'RequestController@store');
-
-Route::get('exceptions/index', 'ExceptionController@index');
-Route::get('exceptions/create', 'ExceptionController@create');
-Route::post('exceptions/create', 'ExceptionController@create');
-Route::post('exceptions/store', 'ExceptionController@store');
-
 Route::get('profiles/create', 'ProfileController@create');
 Route::post('profiles/create', 'ProfileController@create');
 Route::post('profiles/store', 'ProfileController@store');
@@ -53,40 +43,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'Admin
     Route::resource('menus', 'MenuController');
 
     Route::group(['middleware' => ['role:superadministrator|administrator|verificator|user']], function () {
-        Route::resource('information', 'InformationController');
-        Route::post('importInformation', 'InformationController@import');
-
-        Route::resource('regulations', 'RegulationController');
-        Route::post('importRegulation', 'RegulationController@import');
-
-        Route::resource('archives', 'ArchiveController');
-        Route::post('importArchive', 'ArchiveController@import');
-
         Route::resource('pages', 'PageController');
 
-        /*Route::resource('components', 'ComponentController');*/
-
-        Route::resource('requests', 'RequestController');
-
-        Route::resource('exceptions', 'ExceptionController');
-
-        Route::resource('responses', 'ResponseController');
-        Route::post('importResponse', 'ResponseController@import');
-
-        Route::resource('faqs', 'FaqController');
-        Route::post('importFaq', 'FaqController@import');
-
-        Route::resource('types', 'TypeController');
-        Route::post('importType', 'TypeController@import');
-
         Route::resource('categories', 'CategoryController');
-        Route::post('importCategory', 'CategoryController@import');
-
-        Route::resource('formats', 'FormatController');
-        Route::post('importFormat', 'FormatController@import');
-
-        Route::resource('origins', 'OriginController');
-        Route::post('importOrigin', 'OriginController@import');
 
         Route::resource('users', 'UserController');
 
