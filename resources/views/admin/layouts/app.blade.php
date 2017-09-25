@@ -262,22 +262,7 @@
                 $('input[name="slug"]').val(stringToSlug($(this).val()));
             });
 
-            $('#type').on('change', function() {
-                if($('#type').val() === 'video') {
-                    $('#album').attr('readonly', false); 
-                    $('.album .input-group-btn button').show();
-                    $('.album .input-group-btn a').hide();
-                } else {
-                    $('#album').attr('readonly', true); 
-                    $('.album .input-group-btn a').show();
-                    $('.album .input-group-btn button').hide();
-                }
-
-                $('#album-thumb').empty();
-                $('#album').val('');
-            });
-
-            $('.album').on('click', 'button', function(e) {
+            $('.album-manager').on('click', 'button', function(e) {
                 e.preventDefault();
 
                 $('#album-thumb').append('' +
