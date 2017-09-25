@@ -174,6 +174,7 @@ migration data on database
     * arrilot/laravel-widgets
     * khill/lavacharts
     * spatie/laravel-activitylog
+    * league/glide-laravel
 
     For theme use :
     facuz/laravel-themes based on thinhbuzz/laravel-theme
