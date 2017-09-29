@@ -72,7 +72,31 @@ then get it all on your favorite browser,
 
 6. personalization
 
+### Dependency
+
+    * infyomlabs/laravel-generator
+    * santigarcor/laratrust
+    * tymon/jwt-auth
+    * atayahmet/laravel-nestable
+    * infinety-es/filemanager
+    * barryvdh/laravel-debugbar
+    * nwidart/laravel-modules
+    * seguce92/laravel-dompdf
+    * maatwebsite/excel
+    * arrilot/laravel-widgets
+    * khill/lavacharts
+    * spatie/laravel-activitylog
+    * league/glide-laravel
+
+    For theme use :
+    facuz/laravel-themes based on thinhbuzz/laravel-theme
+    or yaapis/Theme
+    instead teepluss/laravel-theme
+    
+    * lavary/laravel-menu -> OPTIONAL
+
 //------------------------------------------------#
+
 
 ## 2. Laravel Generator
 ### Perspective :
@@ -154,31 +178,6 @@ then get it all on your favorite browser,
     - define generator functionality with data and template parameters to be used
     - define rollback
 
-
-//------------------------------------------------#
-
-### Dependency
-
-    * infyomlabs/laravel-generator
-    * santigarcor/laratrust
-    * tymon/jwt-auth
-    * atayahmet/laravel-nestable
-    * infinety-es/filemanager
-    * barryvdh/laravel-debugbar
-    * nwidart/laravel-modules
-    * seguce92/laravel-dompdf
-    * maatwebsite/excel
-    * arrilot/laravel-widgets
-    * khill/lavacharts
-    * spatie/laravel-activitylog
-    * league/glide-laravel
-
-    For theme use :
-    facuz/laravel-themes based on thinhbuzz/laravel-theme
-    or yaapis/Theme
-    instead teepluss/laravel-theme
-    
-    * lavary/laravel-menu -> OPTIONAL
 
 #
 by dandi@redbuzz.co.id
