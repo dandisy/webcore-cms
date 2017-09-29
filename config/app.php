@@ -174,15 +174,10 @@ return [
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
-        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Infinety\FileManager\FileManagerServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Nwidart\Modules\LaravelModulesServiceProvider::class,
         Nestable\NestableServiceProvider::class,
-        Seguce92\DomPDF\ServiceProvider::class,
-        Maatwebsite\Excel\ExcelServiceProvider::class,
         Arrilot\Widgets\ServiceProvider::class,
-        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
         
         /*
          * Application Service Providers...
@@ -243,16 +238,10 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Flash' => Laracasts\Flash\Flash::class,
         'Laratrust' => Laratrust\LaratrustFacade::class,
-        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
-        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        'Module' => Nwidart\Modules\Facades\Module::class,
         'Nestable' => Nestable\Facades\NestableService::class,
-        'PDF' => Seguce92\DomPDF\Facade::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Widget' => Arrilot\Widgets\Facade::class,
         'AsyncWidget' => Arrilot\Widgets\AsyncFacade::class,
-        'Chart' => Khill\Lavacharts\Laravel\LavachartsFacade::class,
     ],
 
 ];
