@@ -64,7 +64,7 @@ then get it all on your favorite browser,
 3. GUI for manage Component Widget
 4. GUI for manage Frontend Menu, like wordpress menu
 
-5. console generate for html input (select) with data from related model
+5. console command to generate html input (select) with data from related model
     - define field option, 
     - add get option in Common\GeneratorField, 
     - add htmlvalue in Utils\HTMLFieldGenerator - and passing to template,
