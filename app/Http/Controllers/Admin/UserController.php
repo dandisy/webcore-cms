@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\Admin\UserDataTable;
+use App\DataTables\UserDataTable;
 use App\Http\Requests;
-use App\Http\Requests\Admin\CreateUserRequest;
-use App\Http\Requests\Admin\UpdateUserRequest;
-use App\Repositories\Admin\RoleRepository;
-use App\Repositories\Admin\UserRepository;
+use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateUserRequest;
+use App\Repositories\RoleRepository;
+use App\Repositories\UserRepository;
 use App\RoleUser;
 use App\User;
 use Flash;

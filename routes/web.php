@@ -12,27 +12,27 @@ use Illuminate\Contracts\Filesystem\Filesystem;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
 |
 */
 
-Auth::routes();
-
 Route::get('/', function () {
-    //return redirect('home');
-
-    return redirect('beranda');
+    // return view('welcome');
+    return redirect('home');
 });
 
-//Route::get('home', 'HomeController@index');
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', function () {
     //if(Laratrust::hasRole(['administrator','superadministrator'])) {
         return redirect('admin/home');
     /*} else {
-        return redirect('beranda');
+        return redirect('home');
     }*/
 });
 
@@ -44,10 +44,12 @@ Route::get('profiles/{id}', 'ProfileController@show');
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('home', 'HomeController@index');
 
-    Route::resource('menus', 'MenuController');
+    Route::get('menus', function () {
+        return view('admin.menus.index');
+    });
 
     Route::group(['middleware' => ['role:superadministrator|administrator|verificator|user']], function () {
-        Route::resource('pages', 'PageController');
+        //Route::resource('pages', 'PageController');
 
         Route::resource('categories', 'CategoryController');
 
@@ -82,5 +84,5 @@ Route::get('/img/{path}', function(Filesystem $filesystem, $path) {
 
 })->where('path', '.*');
 
-Route::get('/{slug}', 'PageController@index')
-    ->where('slug', '(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)');
+/*Route::get('/{slug}', 'PageController@index')
+    ->where('slug', '(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)');*/

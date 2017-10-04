@@ -17,7 +17,7 @@ return array(
     |--------------------------------------------------------------------------
     |
     */
-    'defaultRoute'  => 'assets',
+    'defaultRoute'  => 'admin/filemanager',
 
 
     /*
@@ -52,7 +52,7 @@ return array(
     |--------------------------------------------------------------------------
     |
     */
-    'exceptFolders' => array( 'vendor', 'thumbs', 'css', 'js'),
+    'exceptFolders' => array( 'vendor', 'thumbs', 'filemanager_assets'),
 
 
     /*

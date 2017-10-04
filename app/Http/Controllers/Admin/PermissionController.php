@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\Admin\PermissionDataTable;
+use App\DataTables\PermissionDataTable;
 use App\Http\Requests;
-use App\Http\Requests\Admin\CreatePermissionRequest;
-use App\Http\Requests\Admin\UpdatePermissionRequest;
-use App\Repositories\Admin\PermissionRepository;
+use App\Http\Requests\CreatePermissionRequest;
+use App\Http\Requests\UpdatePermissionRequest;
+use App\Repositories\PermissionRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;

@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\Admin\RoleDataTable;
+use App\DataTables\RoleDataTable;
 use App\Http\Requests;
-use App\Http\Requests\Admin\CreateRoleRequest;
-use App\Http\Requests\Admin\UpdateRoleRequest;
-use App\Repositories\Admin\RoleRepository;
-use App\Repositories\Admin\PermissionRepository;
+use App\Http\Requests\CreateRoleRequest;
+use App\Http\Requests\UpdateRoleRequest;
+use App\Repositories\RoleRepository;
+use App\Repositories\PermissionRepository;
 use App\Role;
 use Flash;
 use App\Http\Controllers\AppBaseController;

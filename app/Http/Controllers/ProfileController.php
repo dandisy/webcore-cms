@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\Admin\ProfileDataTable;
+use App\DataTables\ProfileDataTable;
 use App\Http\Requests;
-use App\Http\Requests\Admin\CreateProfileRequest;
-use App\Http\Requests\Admin\UpdateProfileRequest;
-use App\Repositories\Admin\ProfileRepository;
+use App\Http\Requests\CreateProfileRequest;
+use App\Http\Requests\UpdateProfileRequest;
+use App\Repositories\ProfileRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\Admin\SettingDataTable;
+use App\DataTables\SettingDataTable;
 use App\Http\Requests;
-use App\Http\Requests\Admin\CreateSettingRequest;
-use App\Http\Requests\Admin\UpdateSettingRequest;
-use App\Repositories\Admin\SettingRepository;
+use App\Http\Requests\CreateSettingRequest;
+use App\Http\Requests\UpdateSettingRequest;
+use App\Repositories\SettingRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Admin\Page;
-use App\Models\Admin\Menu;
+use App\Models\Page;
+use App\Models\Menu;
 
 class PageController extends Controller
 {
@@ -25,7 +25,7 @@ class PageController extends Controller
      */
     public function index($slug)
     {
-        $menu = Menu::nested()->get();
+        $menu = []; // Menu::nested()->get();
         $pageSource = Page::where('slug', $slug)->first();
 
         $pageContent = $pageSource ? \Widget::webCore(['pageContent' => $pageSource->content]) : NULL;

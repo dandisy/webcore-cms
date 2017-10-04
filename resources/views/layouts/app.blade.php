@@ -1,178 +1,354 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+<html>
 <head>
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>WebCORE Platform</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-    <meta name="author" content="kominfo.go.id">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Webcore Platform</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('themes/default/assets/stylesheets/bootstrap.css') }}" >
-    <link rel="stylesheet" type="text/css" href="{{ asset('themes/default/assets/stylesheets/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('themes/default/assets/stylesheets/responsive.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('themes/default/assets/stylesheets/colors/color1.css') }}" id="colors">
-    <link rel="stylesheet" type="text/css" href="{{ asset('themes/default/assets/stylesheets/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/select2/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/skins/_all-skins.min.css') }}">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/ionicons/ionicons.min.css') }}">
 
     <!-- Date Picker -->
-    <link href="{{ asset('vendor/adminlte/plugins/datepicker/datepicker3.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/datepicker/datepicker3.css') }}">
+
+    <!-- Date Time Picker -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/datetimepicker/css/bootstrap-datetimepicker.css') }}">
+
+    <!-- Tags Input -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
+
+    <!-- include Summernote -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/summernote/summernote.css') }}">
+
+    <!-- include Fancybox -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/fancybox/jquery.fancybox.min.css') }}">
+
+    <!-- include Fileuploader -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/fileuploader/jquery.fileuploader.css') }}">
 
     <style>
-        .page-title.parallax1 {
-            margin-top: 65px;
+        .main-header {
+            position: fixed;
+            width: 100%;
         }
-        .page-title.parallax1 .top-title {
-            margin-top: -100px;
+        .main-sidebar {
+            position: fixed;
         }
-        .page-title.parallax1 .top-title,
-        .page-title.parallax5 .top-title,
-        .flat-row .title-flat-row {
-            text-align: center;
-            margin-bottom: 35px;
+        .content-wrapper {
+            margin-top: 50px;
         }
-        .page-title.parallax1 .top-title .title,
-        .page-title.parallax5 .top-title .title,
-        .flat-row .title-flat-row .title {
-            font-family: "Bitter", sans-serif;
-            font-size: 28px;
-            margin-bottom: 9px;
-            color: #343434;
+        .sidebar {
+            overflow-y: auto;
+            height: 92.4vh !important;
         }
-        .page-title.parallax1 .top-title p,
-        .page-title.parallax5 .top-title p {
-            font-size: 18px;
-            color: #343434;
-        }
-        .no-content h3 {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-        .no-content h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-        .page-title {
-            margin-bottom: 30px;
-        }
-        .page-title h2 {
-            font-size: 2em;
-        }
-        .page-title h3 {
-            font-size: 1.5em;
-            margin-bottom: 0;
-        }
-        .panel-heading h3 {
-            font-size: 1.3em;
-        }
-        .panel-heading h3 small {
-            font-size: .7em;
-            vertical-align: top;
-            position: relative;
-            left: 5px;
-        }
-
-        .inner-container {
-            margin-bottom: 50px;
-        }
-        .inner-container h3 {
-            margin-bottom: 15px;
-            font-size: 2em;
-        }
-        .inner-submenu {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .inner-submenu li {
-            display: inline-block;
-            padding: 0 15px;
-            border-right: 1px solid #717171;
-        }
-        .inner-submenu li:last-child {
-            border-right: none;
-        }
-        .inner-submenu li.active a {
-            color: #179bd7;
-        }
-
-        .flat-button.style-v1 {
-            color: white;
-            padding: 12px 20px;
-            height: 42px;
-            line-height: 0;
-            background-color: #179bd7;
-            border-top: #179bd7;
-            border-left: #179bd7;
-            border-right: #179bd7;
-            border-bottom: rgba(0,0,0,.25);
-            box-shadow: inset 0 -3px 0 rgba(0,0,0,.25);
-            text-transform: none;
-        }
-        .flat-button {
-            display: inline-block;
-            padding-top: 6px;
-            font-size: 13px;
-            line-height: 1.42857143;
-            padding: 9px 20px;
-            margin-right: 16px;
-            transition: all .2s;
-            border-radius: 3px;
-            border: solid 2px #eaeaea;
-        }
-        a.flat-button {
-            color: #3e3e3e;
-            text-decoration: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+        .file-item {
+            margin-top: 15px;
         }
     </style>
 
-    @yield('styles')
-
-    <!--[if lt IE 9]>
-        <script src="javascript/html5shiv.js"></script>
-        <script src="javascript/respond.min.js"></script>
-    <![endif]-->
-
+    @yield('css')
 </head>
 
-<body class="header-sticky">
+<body class="skin-red sidebar-mini">
+@if (!Auth::guest())
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
 
-    <div class="boxed">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <b>Webcore</b>
+            </a>
 
-        @include('layouts.header')
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <img src="{{ asset('vendor/adminlte/dist/img/user2-160x160.jpg') }}"
+                                     class="user-image" alt="User Image"/>
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">{!! Auth::user()->name !!}</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img src="{{ asset('vendor/adminlte/dist/img/user2-160x160.jpg') }}"
+                                         class="img-circle" alt="User Image"/>
+                                    <p>
+                                        {!! Auth::user()->name !!}
+                                        <small>Member since {!! Auth::user()->created_at->format('M. Y') !!}</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            Sign out
+                                        </a>
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-        @yield('content')
+        <!-- Left side column. contains the logo and sidebar -->
+        @include('layouts.sidebar')
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            @yield('content')
+        </div>
 
-        @include('layouts.footer')
+        <!-- Main Footer -->
+        <footer class="main-footer" style="max-height: 100px;text-align: center">
+            <strong>Copyright © 2017 <a href="#">Webcore</a>.</strong> All rights reserved.
+        </footer>
 
-        <!-- Javascript -->
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/bootstrap.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery.easing.js') }}"></script>
-        
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/owl.carousel.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/parallax.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery.tweet.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery.matchHeight-min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery-validate.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery-waypoints.js') }}"></script>
+    </div>
+@else
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
 
-        <script src="{{ url('vendor/adminlte/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
-        
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/jquery.cookie.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('themes/default/assets/javascript/main.js') }}"></script>
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-        <script>
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{!! url('/') !!}">
+                    Admin
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="{!! url('/home') !!}">Home</a></li>
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    <li><a href="{!! url('/login') !!}">Login</a></li>
+                    <li><a href="{!! url('/register') !!}">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
+    <!-- Javascript -->
+    <!-- jQuery 2.2.3 -->
+    <script src="{{ asset('vendor/adminlte/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{{ asset('vendor/adminlte/plugins//bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- Moment -->
+    <script src="{{ asset('vendor/adminlte/plugins/moment/moment.min.js') }}"></script>
+
+    <!-- Date Picker App -->
+    <script src="{{ asset('vendor/adminlte/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
+
+    <!-- Date Time Picker -->
+    <script src="{{ asset('vendor/adminlte/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+    <!-- Tags Input -->
+    <script src="{{ asset('vendor/adminlte/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
+
+    <!-- Select2 -->
+    <script src="{{ asset('vendor/adminlte/plugins/select2/select2.min.js') }}"></script>
+
+    <!-- Summernote -->
+    <script src="{{ asset('vendor/adminlte/plugins/summernote/summernote.min.js') }}"></script>
+
+    <!-- Fancybox -->
+    <script src="{{ asset('vendor/adminlte/plugins/fancybox/jquery.fancybox.min.js') }}"></script>
+
+    <!-- Fileuploader -->
+    <script src="{{ asset('vendor/adminlte/plugins/fileuploader/jquery.fileuploader.min.js') }}"></script>
+
+    <!-- Input Mask -->
+    <script src="{{ asset('vendor/adminlte/plugins/inputmask/jquery.inputmask.bundle.min.js') }}"></script>
+
+    <!-- AdminLTE App -->
+    <script src="{{ asset('vendor/adminlte/dist/js/app.min.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.rte').summernote({
+                height: 250,
+                minHeight: 100,
+                maxHeight: 300
+            });
+
+            $('.filemanager').fancybox({
+                type : 'iframe'
+            });
+
+            $(".select2").select2();
+
             $(".date").datepicker({
                 format:	'yyyy-mm-dd'
             });
-        </script>
 
-        @yield('scripts')
-    </div>
+            $(".datetime").datetimepicker({
+                format:	'YYYY-MM-DDTHH:mm:ss.XZ'
+            });
+
+            $(".currency").inputmask({ alias : "currency", prefix: "", digits: 0 });
+
+            $('#filer_input').fileuploader({
+                enableApi: true,
+                maxSize: 10,
+                extensions: ["jpg", "png", "jpeg"],
+                captions: {
+                    feedback: 'Upload foto',
+                    button: '+ Foto Album'
+                },
+                showThumbs: true,
+                addMore: true,
+                allowDuplicates: false,
+                onRemove: function (data, el) {
+                    albumDeleted.push(data.data.album);
+                }
+            });
+
+            $(document).on('click', '.file-item .fa-trash', function() {
+                $(this).parents('.file-item').remove();
+                $('#album-thumb').append('<input type="hidden" name="deleteFiles[]" value="' + $(this).data('identity') + '" />');
+            });
+
+            $(document).on('change', 'input[name="title"]', function() {
+                $('input[name="slug"]').val(stringToSlug($(this).val()));
+            });
+
+            $('.album-manager').on('click', 'button', function(e) {
+                e.preventDefault();
+
+                $('#album-thumb').append('' +
+                '<div class="file-item">' +
+                '<div class="col-md-3 col-sm-3 col-xs-3"><img src="http://img.youtube.com/vi/' + $('#album').val() + '/mqdefault.jpg" style="width:100%"></div>' +
+                '<div class="col-md-8" col-sm-8 col-xs-8" style="overflow-x:auto">' + $('#album').val() + '</div>' +
+                '<div class="col-md-1" col-sm-1 col-xs-1"><span class="fa fa-trash" style="cursor:pointer;color:red"></span></div>' +
+                '<div class="clearfix"></div>' +
+                '<input type="hidden" name="files[]" value="' + $('#album').val() + '" />' +
+                '</div>');
+
+                $('#album').val('');
+            });
+
+            var stringToSlug = function (str) {
+                str = str.replace(/^\s+|\s+$/g, ''); // trim
+                str = str.toLowerCase();
+
+                // remove accents, swap ñ for n, etc
+                var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+                var to   = "aaaaeeeeiiiioooouuuunc------";
+
+                for(var i=0, l=from.length ; i<l ; i++) {
+                    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+                }
+
+                str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+                return str;
+            }
+        });
+
+        // filemanager auto run when close fancybox, after select file and then insert image thumbnail
+        var OnMessage = function(data){
+            if(data.appendId == 'album') {
+                $('#' + data.appendId + '-thumb').append('' +
+                '<div class="file-item">' +
+                '<div class="col-md-3 col-sm-3 col-xs-3"><img src="' + data.thumb + '" style="width:100%"></div>' +
+                '<div class="col-md-8" col-sm-8 col-xs-8" style="overflow-x:auto">' + data.thumb + '</div>' +
+                '<div class="col-md-1" col-sm-1 col-xs-1"><span class="fa fa-trash" style="cursor:pointer;color:red"></span></div>' +
+                '<div class="clearfix"></div>' +
+                '<input type="hidden" name="files[]" value="' + data.thumb + '" />' +
+                '</div>');
+            } else {
+                $('#' + data.appendId + '-thumb').html('<img src="' + data.thumb + '" style="width:100%">');
+            }
+            $('input[name="' + data.appendId + '"]').val(data.thumb);
+            $.fancybox.close();
+        };
+
+        $('#myModalPermissions').on('show.bs.modal', function (e) {
+            var content = '';
+
+            $.ajax({
+                type: 'get',
+                url: '{{ url("api/permissions") }}'
+            }).done(function (res) {
+                $.each(res.data, function (index, value) {
+                    content += '<div class="checkbox col-sm-6"><label><input type="checkbox" name="permission" value="' + value.id + '">' + ' ' + value.display_name + '</label></div>';
+                });
+
+                $('#permission-container').html(content);
+            });
+        });
+
+        $('#myModalRole').on('show.bs.modal', function (e) {
+            var content = '';
+
+            $.ajax({
+                type: 'get',
+                url: '{{ url("api/roles") }}'
+            }).done(function (res) {
+                $.each(res.data, function (index, value) {
+                    content += '<div class="checkbox col-sm-6"><label><input type="radio" name="role" value="' + value.id + '">' + ' ' + value.display_name + '</label></div>';
+                });
+
+                $('#role-container').html(content);
+            });
+        });
+    </script>
+
+    @yield('scripts')
 </body>
 </html>

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\Admin\PageDataTable;
+use App\DataTables\PageDataTable;
 use App\Http\Requests;
-use App\Http\Requests\Admin\CreatePageRequest;
-use App\Http\Requests\Admin\UpdatePageRequest;
-use App\Repositories\Admin\PageRepository;
+use App\Http\Requests\CreatePageRequest;
+use App\Http\Requests\UpdatePageRequest;
+use App\Repositories\PageRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Support\Facades\Auth;

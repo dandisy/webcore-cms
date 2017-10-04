@@ -28,7 +28,7 @@ class HomeController extends Controller
         if(Auth::user()->hasRole(['administrator','superadministrator','user'])) {
             return view('admin.home');
         } else {
-            return redirect(url('beranda'));
+            return redirect(url('home'));
         }
 
         /*$theme = \Theme::uses('glamor')->layout('default');

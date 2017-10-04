@@ -1,22 +1,22 @@
 <?php
 
 return [
-    'parent'=> 'parent',
+    'parent'=> 'parent_id',
     'primary_key' => 'id',
     'generate_url'   => true,
     'childNode' => 'child',
     'body' => [
         'id',
-        'label',
-        'link',
+        'name',
+        'slug',
     ],
     'html' => [
-        'label' => 'label',
-        'href'  => 'link'
+        'label' => 'name',
+        'href'  => 'slug'
     ],
     'dropdown' => [
         'prefix' => '',
-        'label' => 'label',
+        'label' => 'name',
         'value' => 'id'
     ]
 ];

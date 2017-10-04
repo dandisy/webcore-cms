@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DataTables\Admin\CategoryDataTable;
-use App\Http\Requests\Admin;
-use App\Http\Requests\Admin\CreateCategoryRequest;
-use App\Http\Requests\Admin\UpdateCategoryRequest;
-use App\Repositories\Admin\CategoryRepository;
+use App\DataTables\CategoryDataTable;
+use App\Http\Requests;
+use App\Http\Requests\CreateCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use App\Repositories\CategoryRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Response;
-use App\Models\Admin\Category;
+use App\Models\Category;
 
 class CategoryController extends AppBaseController
 {
