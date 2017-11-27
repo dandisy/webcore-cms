@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Admin\Page;
-use App\Models\Admin\Menu;
+use App\Models\Page;
+use App\Models\MenuItem;
 
 use League\Glide\ServerFactory;
 use League\Glide\Responses\LaravelResponseFactory;
@@ -27,6 +27,9 @@ Route::get('/', function () {
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return MenuItem::renderAsHtml();
+});
 
 Route::get('/admin', function () {
     //if(Laratrust::hasRole(['administrator','superadministrator'])) {
@@ -35,11 +38,6 @@ Route::get('/admin', function () {
         return redirect('home');
     }*/
 });
-
-Route::get('profiles/create', 'ProfileController@create');
-Route::post('profiles/create', 'ProfileController@create');
-Route::post('profiles/store', 'ProfileController@store');
-Route::get('profiles/{id}', 'ProfileController@show');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('home', 'HomeController@index');
@@ -51,11 +49,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'Admin
     Route::group(['middleware' => ['role:superadministrator|administrator|verificator|user']], function () {
         //Route::resource('pages', 'PageController');
 
-        Route::resource('categories', 'CategoryController');
-
         Route::resource('users', 'UserController');
-
-        Route::resource('profiles', 'ProfileController');
     });
 
     Route::group(['middleware' => ['role:superadministrator|administrator']], function () {

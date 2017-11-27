@@ -23,6 +23,7 @@ class CreateMenuItemsTable extends Migration
             $table->integer('menu')->unsigned();
             $table->integer('depth')->default(0);
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('menu')->references('id')->on(config('menu.table_prefix') . 'menus')
             ->onDelete('cascade')

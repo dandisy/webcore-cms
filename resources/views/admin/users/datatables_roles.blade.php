@@ -1,1 +1,1 @@
-{!! $role_user['role_id'] !!}
+{!! $role['role_id'] !!}

@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Eloquent as Model;
-use Nestable\NestableTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -14,9 +13,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Menu extends Model
 {
     use SoftDeletes;
-    use NestableTrait;
-
-    protected $parent = 'parent';
 
     public $table = 'menus';    
 
@@ -24,10 +20,7 @@ class Menu extends Model
 
 
     public $fillable = [
-        'label',
-        'link',
-        'parent',
-        'group'
+        'name'
     ];
 
     /**
@@ -36,10 +29,7 @@ class Menu extends Model
      * @var array
      */
     protected $casts = [
-        'label' => 'string',
-        'link' => 'string',
-        'parent' => 'integer',
-        'group' => 'string'
+        'name' => 'string'
     ];
 
     /**
@@ -48,8 +38,7 @@ class Menu extends Model
      * @var array
      */
     public static $rules = [
-        'label' => 'required',
-        'link' => 'required'
+        'name' => 'required'
     ];
 
     

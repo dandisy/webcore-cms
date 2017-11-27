@@ -5,17 +5,13 @@
     <a href="{!! url('admin/home') !!}"><i class="fa fa-area-chart"></i><span>Stats</span></a>
 </li>
 
-<li class="header">PUBLISH</li>
+{{--<li class="header">PUBLISH</li>
 
-{{--<li class="{{ Request::is('admin/pages*') ? 'active' : '' }}">
+<li class="{{ Request::is('admin/pages*') ? 'active' : '' }}">
     <a href="{!! route('pages.index') !!}"><i class="fa fa-sticky-note"></i><span>Pages</span></a>
 </li>--}}
 
-<li class="header">SERVICE</li>
-
-{{--<li class="{{ Request::is('messages*') ? 'active' : '' }}">
-    <a href="{!! route('messages.index') !!}"><i class="fa fa-edit"></i><span>Messages</span></a>
-</li>--}}
+{{--<li class="header">SERVICE</li>--}}
 
 <li class="header">ARRANGE</li>
 
@@ -23,11 +19,7 @@
     <a href="{!! url('admin/menus') !!}"><i class="fa fa-bars"></i><span>Menus</span></a>
 </li>
 
-<li class="header">MASTER</li>
-
-<li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
-    <a href="{!! route('categories.index') !!}"><i class="fa fa-edit"></i><span>Categories</span></a>
-</li>
+{{--<li class="header">MASTER</li>--}}
 
 <li class="header">MANAGE</li>
 
@@ -37,10 +29,6 @@
 
 <li class="{{ Request::is('admin/users*') ? 'active' : '' }}">
     <a href="{!! route('users.index') !!}"><i class="fa fa-users"></i><span>Users</span></a>
-</li>
-
-<li class="{{ Request::is('admin/profiles*') ? 'active' : '' }}">
-    <a href="{!! route('profiles.index') !!}"><i class="fa fa-users"></i><span>Profiles</span></a>
 </li>
 @endrole
 

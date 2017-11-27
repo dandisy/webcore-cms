@@ -3,64 +3,57 @@
 namespace App\DataTables;
 
 use App\Models\Setting;
-use Form;
-use Yajra\Datatables\Services\DataTable;
+use Yajra\DataTables\Services\DataTable;
+use Yajra\DataTables\EloquentDataTable;
 
 class SettingDataTable extends DataTable
 {
-
     /**
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function ajax()
-    {
-        return $this->datatables
-            ->eloquent($this->query())
-            ->addColumn('action', 'admin.settings.datatables_actions')
-            ->make(true);
-    }
-
-    /**
-     * Get the query object to be processed by datatables.
+     * Build DataTable class.
      *
-     * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
+     * @param mixed $query Results from query() method.
+     * @return \Yajra\DataTables\DataTableAbstract
      */
-    public function query()
+    public function dataTable($query)
     {
-        $settings = Setting::query();
+        $dataTable = new EloquentDataTable($query);
 
-        return $this->applyScopes($settings);
+        return $dataTable
+            ->addColumn('action', 'admin.settings.datatables_actions');
     }
-
+    
     /**
-     * Optional method if you want to use html builder.
-     *
-     * @return \Yajra\Datatables\Html\Builder
-     */
+        * Get query source of dataTable.
+        *
+        * @param \App\Models\Setting $model
+        * @return \Illuminate\Database\Eloquent\Builder
+        */
+    public function query(Setting $model)
+    {
+        return $model->newQuery();
+    }
+    
+    /**
+        * Optional method if you want to use html builder.
+        *
+        * @return \Yajra\DataTables\Html\Builder
+        */
     public function html()
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->addAction(['width' => '10%'])
-            ->ajax('')
+            ->minifiedAjax()
+            ->addAction(['width' => '80px'])
             ->parameters([
-                'dom' => 'Bfrtip',
-                'scrollX' => false,
+                'dom'     => 'Bfrtip',
+                'order'   => [[0, 'desc']],
                 'buttons' => [
+                    'create',
+                    'export',
                     'print',
                     'reset',
                     'reload',
-                    [
-                         'extend'  => 'collection',
-                         'text'    => '<i class="fa fa-download"></i> Export',
-                         'buttons' => [
-                             'csv',
-                             'excel',
-                             /*'pdf',*/
-                         ],
-                    ],
-                    'colvis'
-                ]
+                ],
             ]);
     }
 
@@ -72,9 +65,9 @@ class SettingDataTable extends DataTable
     private function getColumns()
     {
         return [
-            'key' => ['name' => 'key', 'data' => 'key'],
-            'value' => ['name' => 'value', 'data' => 'value'],
-            'description' => ['name' => 'description', 'data' => 'description']
+            'key',
+            'value',
+            'description'
         ];
     }
 
@@ -85,6 +78,6 @@ class SettingDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'settings';
+        return 'settings_' . time();
     }
 }

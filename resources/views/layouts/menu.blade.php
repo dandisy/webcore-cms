@@ -25,10 +25,6 @@
 
 <li class="header">MASTER</li>
 
-<li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
-    <a href="{!! route('categories.index') !!}"><i class="fa fa-edit"></i><span>Categories</span></a>
-</li>
-
 <li class="header">MANAGE</li>
 
 <li class="{{ Request::is('assets*') ? 'active' : '' }}">
@@ -37,10 +33,6 @@
 
 <li class="{{ Request::is('admin/users*') ? 'active' : '' }}">
     <a href="{!! route('users.index') !!}"><i class="fa fa-users"></i><span>Users</span></a>
-</li>
-
-<li class="{{ Request::is('admin/profiles*') ? 'active' : '' }}">
-    <a href="{!! route('profiles.index') !!}"><i class="fa fa-users"></i><span>Profiles</span></a>
 </li>
 @endrole
 
