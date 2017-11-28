@@ -88,7 +88,31 @@ then get it all on your favorite browser,
 //------------------------------------------------#
 
 
-## 2. Laravel Generator
+## 2. Features
+
+1. Admin Template
+
+    ![AdminLTE](https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67)
+
+2. File Manager
+
+    ![File Manager](https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png)
+
+3. Menu Manager
+
+    ![Menu Manager](https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67)
+
+4. Additional Form Builder
+
+    - Date Time Picker
+    - Select2
+    - HTML Text Editor
+    - File Uploder
+
+//------------------------------------------------#
+
+
+## 3. Laravel Generator
 ### Perspective :
 
     HUMAN
@@ -167,27 +191,6 @@ then get it all on your favorite browser,
 
     - define generator functionality with data and template parameters to be used
     - define rollback
-
-### FEATURES
-
-1. Admin Template
-
-    ![AdminLTE](https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67)
-
-2. File Manager
-
-    ![File Manager](https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png)
-
-3. Menu Manager
-
-    ![Menu Manager](https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67)
-
-4. Additional Form Builder
-
-    - Date Time Picker
-    - Select2
-    - HTML Text Editor
-    - File Uploder
 
 
 #
