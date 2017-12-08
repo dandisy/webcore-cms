@@ -55,17 +55,6 @@
         "inIndex": true
     },
     {
-        "name": "status",
-        "dbType": "string",
-        "htmlType": "select,Pending:pending,Publish:publish",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true
-    },
-    {
         "name": "category",
         "dbType": "integer",
         "htmlType": "select,Uncategorized:0,Category1:1,Category2:2",
@@ -77,10 +66,21 @@
         "inIndex": true
     },
     {
-        "name": "Cover",
+        "name": "cover",
         "dbType": "string",
         "htmlType": "file-manager",
         "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "status",
+        "dbType": "string",
+        "htmlType": "select,Pending:pending,Publish:publish",
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,

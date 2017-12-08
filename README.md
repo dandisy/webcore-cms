@@ -6,13 +6,13 @@
 1.  Backend Page (Admin)
     
     Scope of Admin Page :    
-    preparing user input, and then for input data manually or by data source
+    preparing user admin input form, input data by writed or by data source referenced
     
 2. UI Component (just a part of page)
 
     Scope of UI Component (widget) :    
-    provide reusable part of UI (widget) to glue in template of page,
-    and defining tracking configuration user interaction for personalization
+    provide reusable part of UI (widget) to included in template of page,
+    (*and defining tracking configuration user interaction for personalization)
          
     Scope of Page :    
     layout and styling UI Component generally to be a Page by incorporating a template
@@ -104,10 +104,18 @@ then get it all on your favorite browser,
 
 4. Additional Form Builder
 
-    - Date Time Picker
-    - Select2
-    - HTML Text Editor
-    - File Uploder
+    - Date Time Picker (htmltype = date or datetime)
+    - Select2 (all select input will be select2)
+    - HTML Text Editor (htmltype = textarea-rte)
+    - File Uploder (htmltype = file-manager or album-manager)
+
+5. Reusable Component
+
+    - by Widget (Widget Class & Widget View) using arrilot/laravel-widgets for UI Component
+
+        as much as possible the widget should have a loose coupled, bring data on the fly, avoid directly include / use in widget class
+
+    - by Laravel Package
 
 //------------------------------------------------#
 

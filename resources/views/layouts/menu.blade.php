@@ -7,6 +7,10 @@
 
 <li class="header">PUBLISH</li>
 
+<li class="{{ Request::is('posts*') ? 'active' : '' }}">
+    <a href="{!! route('posts.index') !!}"><i class="fa fa-edit"></i><span>Posts</span></a>
+</li>
+
 <li class="{{ Request::is('admin/pages*') ? 'active' : '' }}">
     <a href="{!! route('pages.index') !!}"><i class="fa fa-sticky-note"></i><span>Pages</span></a>
 </li>
@@ -19,9 +23,9 @@
 
 <li class="header">ARRANGE</li>
 
-<li class="{{ Request::is('admin/menus*') ? 'active' : '' }}">
+{{--<li class="{{ Request::is('admin/menus*') ? 'active' : '' }}">
     <a href="{!! route('menus.index') !!}"><i class="fa fa-bars"></i><span>Menus</span></a>
-</li>
+</li>--}}
 
 <li class="header">MASTER</li>
 

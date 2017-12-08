@@ -29,3 +29,10 @@ Route::resource('permissions', 'PermissionAPIController');
 
 //Route::resource('pages', 'PageAPIController');
 
+
+
+
+
+
+
+Route::resource('posts', 'PostAPIController');

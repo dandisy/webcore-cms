@@ -126,6 +126,13 @@
             @yield('content')
         </div>
 
+        <div class="summernote-filemanager">
+            <div id="snfmImage-thumb" style="display:none;width:100%">
+                <img src="" alt="" style="width:100%">
+            </div>
+            <a style="display:none" href="{!! url('admin/filemanager/dialog?filter=all&appendId=snfmImage') !!}" class="sn-filemanager fancybox.iframe" data-fancybox-type="iframe"></a>
+        </div>
+
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
             <strong>Copyright © 2017 <a href="#">WebCORE</a>.</strong> All rights reserved.
@@ -217,11 +224,54 @@
 
     <script>
         $(document).ready(function() {
+            // start summernote
+            var snfmContext;
+
+            var fileManager = function(context) {
+                snfmContext = context;
+
+                var ui = $.summernote.ui;
+
+                // create button
+                var button = ui.button({
+                    contents: '<i class="fa fa-photo"/>',
+                    tooltip: 'File Manager',
+                    click: function() {
+                        $('.sn-filemanager').trigger('click');
+                    }
+                });
+
+                return button.render();
+            }
+
             $('.rte').summernote({
                 height: 250,
                 minHeight: 100,
-                maxHeight: 300
+                maxHeight: 300,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'hr']],
+                    ['image', ['fm']],
+                    ['video', ['video']],
+                    ['misc', ['fullscreen', 'codeview']]
+                ],
+                buttons: {
+                    fm: fileManager
+                }
             });
+
+            $('.sn-filemanager').fancybox({
+                type : 'iframe',
+                afterClose: function() {
+                    var snfmImage = $('#snfmImage-thumb').find('img').attr('src');
+                    snfmContext.invoke('editor.insertImage', snfmImage, snfmImage.substr(snfmImage.lastIndexOf('/') + 1));
+                }
+            });
+            // end summernote
 
             $('.filemanager').fancybox({
                 type : 'iframe'

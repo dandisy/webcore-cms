@@ -1,8 +1,8 @@
 <?php
 
 use App\Models\Page;
-use App\Models\MenuItem;
-
+//use App\Models\MenuItem;
+use Illuminate\Http\Request;
 use League\Glide\ServerFactory;
 use League\Glide\Responses\LaravelResponseFactory;
 use Illuminate\Contracts\Filesystem\Filesystem;
@@ -27,9 +27,9 @@ Route::get('/', function () {
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', function () {
-    return MenuItem::renderAsHtml();
-});
+// Route::get('/home', function () {
+//     return MenuItem::renderAsHtml();
+// });
 
 Route::get('/admin', function () {
     //if(Laratrust::hasRole(['administrator','superadministrator'])) {
@@ -47,7 +47,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'Admin
     });
 
     Route::group(['middleware' => ['role:superadministrator|administrator|verificator|user']], function () {
-        //Route::resource('pages', 'PageController');
+        Route::resource('posts', 'PostController');
+        // Route::post('importPost', 'PostController@import');
+
+        Route::resource('pages', 'PageController');
 
         Route::resource('users', 'UserController');
     });
@@ -78,5 +81,6 @@ Route::get('/img/{path}', function(Filesystem $filesystem, $path) {
 
 })->where('path', '.*');
 
-/*Route::get('/{slug}', 'PageController@index')
-    ->where('slug', '(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)');*/
+Route::get('/{uri}/{all?}', 'PageController@index')
+    ->where('uri', '(?!filemanager)(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)')
+    ->where('all', '.*');

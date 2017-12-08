@@ -5,11 +5,15 @@
     <a href="{!! url('admin/home') !!}"><i class="fa fa-area-chart"></i><span>Stats</span></a>
 </li>
 
-{{--<li class="header">PUBLISH</li>
+<li class="header">PUBLISH</li>
+
+<li class="{{ Request::is('posts*') ? 'active' : '' }}">
+    <a href="{!! route('posts.index') !!}"><i class="fa fa-edit"></i><span>Posts</span></a>
+</li>
 
 <li class="{{ Request::is('admin/pages*') ? 'active' : '' }}">
     <a href="{!! route('pages.index') !!}"><i class="fa fa-sticky-note"></i><span>Pages</span></a>
-</li>--}}
+</li>
 
 {{--<li class="header">SERVICE</li>--}}
 

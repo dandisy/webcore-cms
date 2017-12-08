@@ -22,6 +22,8 @@ class WebCore extends AbstractWidget
         if(preg_match('/\[([^\[]+)\]/', $this->config['pageContent'], $match)) {
             $this->config['pageContent'] = preg_replace_callback('/\[([^\[]+)\]/', function ($matches)
             {
+                $widgetContent = NULL;
+
                 foreach($matches as $match) {
                     $dataRef = substr($match, 1, -1);
                     $dataRef = strip_tags($dataRef);
@@ -34,17 +36,32 @@ class WebCore extends AbstractWidget
                         $item = explode('=', $val);
                         $widgetData[$item[0]] = $item[1];
                     }
-                    $model = '\App\Models\Admin\\' . $widgetData['source'];
 
-                    $widgetContent = NULL;
-                    if($widgetData['where']) {
+                    $model = '\App\Models\\' . $widgetData['source'];
+
+                    $whereContent = NULL;
+                    if(array_key_exists('where', $widgetData)) {
                         $cond = explode(':', $widgetData['where']);
-                        $widgetContent = $model::where($cond[0], $cond[1])->paginate(10);
+                        //$whereContent = $model::where($cond[0], $cond[1])->paginate(10);
+                        $whereContent = $model::where($cond[0], $cond[1])->get();
                     } else {
-                        $widgetContent = $model::paginate(10);
+                        //$whereContent = $model::paginate(10);
+                        $whereContent = $model::all();
                     }
 
-                    return view('widgets.'.$widgetData['widget'], [
+                    if(array_key_exists('position', $widgetData)) {
+                        $position = $widgetData["position"];
+                        $widgetContent[$position] = $whereContent->toArray();
+                    } else {
+                        $widgetContent['main'] = $whereContent->toArray();
+                    }
+
+                    $widgetView = 'page';
+                    if(array_key_exists('widget', $widgetData)) {
+                        $widgetView = $widgetData["widget"];
+                    }
+
+                    return view('widgets.' . $widgetView, [
                         'widgetContent' => $widgetContent,
                     ]);
                 }
