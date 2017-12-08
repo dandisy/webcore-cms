@@ -33,14 +33,14 @@ class PageController extends Controller
             {
                 $uri .= $segment.'/';
             }
-        }
+        }    
         $uri = rtrim($uri, '/');
         // end slug
 
         $menu = MenuItem::nested()->get();
 
         $pageSource = Page::where('slug', $uri)->first();
-        $pageContent = $pageSource ? \Widget::webCore(['pageContent' => $pageSource->content]) : NULL;
+        $pageContent = $pageSource ? \Widget::Page(['pageContent' => $pageSource->content]) : NULL;
 
         return view('layouts.page')
             ->with('slug', $uri)

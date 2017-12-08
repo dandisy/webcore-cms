@@ -4,7 +4,7 @@ namespace App\Widgets;
 
 use Arrilot\Widgets\AbstractWidget;
 
-class WebCore extends AbstractWidget
+class Page extends AbstractWidget
 {
     /**
      * The configuration array.
@@ -23,7 +23,7 @@ class WebCore extends AbstractWidget
             $this->config['pageContent'] = preg_replace_callback('/\[([^\[]+)\]/', function ($matches)
             {
                 $widgetContent = NULL;
-
+                
                 foreach($matches as $match) {
                     $dataRef = substr($match, 1, -1);
                     $dataRef = strip_tags($dataRef);
