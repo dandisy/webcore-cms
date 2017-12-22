@@ -78,8 +78,8 @@ in http://localhost/webcore-cms/public/oauth-admin
 
 4. Image Manipulation
 
-    to manipulation image use http://localhost/webcore/public/img/{path}?{param=value}
-    see Glide documentation in http://glide.thephpleague.com
+        to manipulate image use http://localhost/webcore/public/img/{path}?{param=value}
+        see Glide documentation in http://glide.thephpleague.com
 
 5. Additional Form Builder
 
