@@ -53,6 +53,66 @@ Finally
 
 then get it all on your favorite browser,
 
+OPTIONAL if you want to activated oauth 
+
+    npm run dev
+
+then you can access oauth admin panel 
+to manage your oauth client 
+in http://localhost/webcore-cms/public/oauth-admin
+
+
+### Features
+
+1. Admin Template
+
+    ![AdminLTE](https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67)
+
+2. File Manager
+
+    ![File Manager](https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png)
+
+3. Menu Manager
+
+    ![Menu Manager](https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67)
+
+4. Image Manipulation
+
+    to manipulation image use http://localhost/webcore/public/img/{path}?{param=value}
+    see Glide documentation in http://glide.thephpleague.com
+
+5. Additional Form Builder
+
+    - Date Time Picker (htmltype = date or datetime)
+    - Select2 (all select input will be select2)
+    - HTML Text Editor (htmltype = textarea-rte)
+    - File Uploder (htmltype = file-manager or album-manager)
+
+6. Reusable Component
+
+    - by Widget (Widget Class & Widget View) using arrilot/laravel-widgets for UI Component
+
+        as much as possible the widget should have a loose coupled, bring data on the fly, avoid directly include / use in widget class
+
+    - by Laravel Package
+
+7. Pre Configured Oauth using Laravel Passport (with resources example)
+
+    - to login use http://localhost/webcore-cms/public/oauth/token
+
+            with params :
+
+                - client_id
+                - client_secret
+                - grant_type
+                - username
+                - password
+                - scope
+
+    - to get resources example http://localhost/webcore-cms/public/api/product
+
+            with header Authorization = Bearer token
+
 ### Dependency
 
     * infyomlabs/laravel-generator
@@ -67,7 +127,7 @@ then get it all on your favorite browser,
     
     * spatie/laravel-activitylog
     * tymon/jwt-auth
-    * seguce92/laravel-dompdf
+    * barryvdh/laravel-dompdf or seguce92/laravel-dompdf
     * maatwebsite/excel
     * khill/lavacharts
 
@@ -85,42 +145,13 @@ then get it all on your favorite browser,
     * toxic-lemurs/menu-builder -> ALTERNATIVE
     * mkdesignn/menubuilder -> ALTERNATIVE
 
-//------------------------------------------------#
-
-
-## 2. Features
-
-1. Admin Template
-
-    ![AdminLTE](https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67)
-
-2. File Manager
-
-    ![File Manager](https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png)
-
-3. Menu Manager
-
-    ![Menu Manager](https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67)
-
-4. Additional Form Builder
-
-    - Date Time Picker (htmltype = date or datetime)
-    - Select2 (all select input will be select2)
-    - HTML Text Editor (htmltype = textarea-rte)
-    - File Uploder (htmltype = file-manager or album-manager)
-
-5. Reusable Component
-
-    - by Widget (Widget Class & Widget View) using arrilot/laravel-widgets for UI Component
-
-        as much as possible the widget should have a loose coupled, bring data on the fly, avoid directly include / use in widget class
-
-    - by Laravel Package
+    If you activated laravel passport use
+    * spatie/laravel-cors
 
 //------------------------------------------------#
 
 
-## 3. Laravel Generator
+## 2. Laravel Generator
 ### Perspective :
 
     HUMAN

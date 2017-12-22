@@ -39,6 +39,12 @@ Route::get('/admin', function () {
     }*/
 });
 
+Route::group(['middleware' => 'auth'], function () {    
+    Route::get('oauth-admin', function() {
+        return view('oauth.index');
+    });
+});
+
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('home', 'HomeController@index');
 
@@ -82,5 +88,5 @@ Route::get('/img/{path}', function(Filesystem $filesystem, $path) {
 })->where('path', '.*');
 
 Route::get('/{uri}/{all?}', 'PageController@index')
-    ->where('uri', '(?!filemanager)(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)')
+    ->where('uri', '(?!img)(?!filemanager)(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)')
     ->where('all', '.*');
