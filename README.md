@@ -57,6 +57,8 @@ OPTIONAL if you want to activated oauth
 
     npm run dev
 
+    php artisan passport:keys
+
 then you can access oauth admin panel 
 to manage your oauth client 
 in http://localhost/webcore-cms/public/oauth-admin
@@ -139,9 +141,7 @@ in http://localhost/webcore-cms/public/oauth-admin
     
     * nwidart/laravel-modules -> OPTIONAL
     * lavary/laravel-menu -> OPTIONAL
-    * barryvdh/laravel-snappy -> OPTIONAL
     * h4cc/wkhtmltopdf-amd64 -> OPTIONAL
-    * barryvdh/laravel-snappy -> OPTIONAL
 
     * toxic-lemurs/menu-builder -> ALTERNATIVE
     * mkdesignn/menubuilder -> ALTERNATIVE
