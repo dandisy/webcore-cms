@@ -80,7 +80,7 @@ in http://localhost/webcore-cms/public/oauth-admin
 
 4. Image Manipulation
 
-        to manipulate image use http://localhost/webcore/public/img/{path}?{param=value}
+        to manipulate image use http://localhost/webcore-cms/public/img/{path}?{param=value}
 
         default {path} is configured relative to public_path, see .env for FILESYSTEM_DRIVER and config/filesystems.php
         
@@ -88,10 +88,10 @@ in http://localhost/webcore-cms/public/oauth-admin
 
 5. Laravel Generator with Additional Form Builder
 
-    - Date Time Picker (htmltype = date or datetime)
+    - Date Time Picker (htmltype = date-picker, time-picker or datetime-picker)
     - Select2 (all select input will be select2)
-    - HTML Text Editor (htmltype = textarea-rte)
-    - File Uploder (htmltype = file-manager or album-manager)
+    - HTML Text Editor (htmltype = text-editor)
+    - File Manager (htmltype = file-manager or files-manager)
 
 6. Reusable Component
 
