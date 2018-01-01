@@ -18,9 +18,7 @@ class SettingsTableSeeder extends Seeder
             ['key' => 'site_logo', 'value' => 'images/logo/logo.png', 'description' => 'Your site logo. Note : upload your logo using assets manager, and copy your uploded logo link to Value field in here'],
             ['key' => 'google_analytics', 'value' => 'google_analytics_code', 'description' => 'Your google analytics key'],
             ['key' => 'facebook', 'value' => 'https://www.facebook.com/youraccount	', 'description' => 'Your facebook page'],
-            ['key' => 'twitter', 'value' => 'https://www.twitter.com/youraccount	', 'description' => 'Your twitter page'],
-            ['key' => 'language', 'value' => 'english', 'description' => 'Language for internationalization of your site'],
-            ['key' => 'language', 'value' => 'indonesia', 'description' => 'Language for internationalization of your site']
+            ['key' => 'twitter', 'value' => 'https://www.twitter.com/youraccount	', 'description' => 'Your twitter page']
         ]);
     }
 }
