@@ -17,7 +17,15 @@ return array(
     |--------------------------------------------------------------------------
     |
     */
-    'defaultRoute'  => 'admin/filemanager',
+    'defaultRoute'  => 'assets',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Directory for your assets, relative to laravel public directory:
+    |--------------------------------------------------------------------------
+    |
+    */
+    'assetsDirectory'  => '/storage',
 
 
     /*

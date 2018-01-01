@@ -45,22 +45,10 @@ Route::get('post/{id}', function ($id) use ($posts) {
 });
 // end resource example
 
-//Route::resource('menus', 'MenuAPIController');
+Route::resource('pages', 'Admin\PageAPIController');
 
-Route::resource('users', 'UserAPIController');
+Route::resource('posts', 'Admin\PostAPIController');
 
-Route::resource('roles', 'RoleAPIController');
+Route::resource('banners', 'Admin\BannerAPIController');
 
-Route::resource('permissions', 'PermissionAPIController');
-
-//Route::resource('settings', 'SettingAPIController');
-
-//Route::resource('pages', 'PageAPIController');
-
-
-
-
-
-
-
-Route::resource('posts', 'PostAPIController');
+Route::resource('presentations', 'Admin\PresentationAPIController');

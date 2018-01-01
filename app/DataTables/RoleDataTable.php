@@ -19,8 +19,8 @@ class RoleDataTable extends DataTable
         $dataTable = new EloquentDataTable($query);
 
         return $dataTable
-            ->addColumn('permission', 'admin.roles.datatables_permissions')
-            ->addColumn('action', 'admin.roles.datatables_actions')
+            ->addColumn('permission', 'roles.datatables_permissions')
+            ->addColumn('action', 'roles.datatables_actions')
             ->rawColumns(['permission', 'action']);
     }
     

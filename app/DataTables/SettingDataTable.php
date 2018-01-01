@@ -19,7 +19,7 @@ class SettingDataTable extends DataTable
         $dataTable = new EloquentDataTable($query);
 
         return $dataTable
-            ->addColumn('action', 'admin.settings.datatables_actions');
+            ->addColumn('action', 'settings.datatables_actions');
     }
     
     /**

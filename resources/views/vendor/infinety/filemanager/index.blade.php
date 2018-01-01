@@ -1,4 +1,4 @@
-@extends('admin.layouts.filemanager')
+@extends('layouts.filemanager')
 
 @section('styles')
     <meta name="csrf-token" content="{{ csrf_token() }}">

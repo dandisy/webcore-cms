@@ -11,6 +11,17 @@
         "inIndex": false
     },
     {
+        "name": "name",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
         "name": "title",
         "dbType": "string",
         "htmlType": "text",
@@ -33,10 +44,21 @@
         "inIndex": true
     },
     {
-        "name": "content",
+        "name": "summary",
         "dbType": "text",
-        "htmlType": "textarea-rte",
-        "validations": "required",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "description",
+        "dbType": "text",
+        "htmlType": "text-editor",
+        "validations": null,
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -58,7 +80,7 @@
         "name": "category",
         "dbType": "integer",
         "htmlType": "select,Uncategorized:0,Category1:1,Category2:2",
-        "validations": "required",
+        "validations": null,
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -77,6 +99,28 @@
         "inIndex": true
     },
     {
+        "name": "version",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "language",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
         "name": "status",
         "dbType": "string",
         "htmlType": "select,Pending:pending,Publish:publish",
@@ -85,6 +129,17 @@
         "fillable": true,
         "primary": false,
         "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "created_by",
+        "dbType": "integer",
+        "htmlType": null,
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": false,
         "inIndex": true
     },
     {

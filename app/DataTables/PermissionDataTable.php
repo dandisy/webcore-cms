@@ -19,7 +19,7 @@ class PermissionDataTable extends DataTable
         $dataTable = new EloquentDataTable($query);
 
         return $dataTable
-            ->addColumn('action', 'admin.permissions.datatables_actions');
+            ->addColumn('action', 'permissions.datatables_actions');
     }
     
     /**

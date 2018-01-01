@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class PostRepository
  * @package App\Repositories
- * @version December 7, 2017, 3:30 pm UTC
+ * @version January 1, 2018, 4:19 pm UTC
  *
  * @method Post findWithoutFail($id, $columns = ['*'])
  * @method Post find($id, $columns = ['*'])
@@ -20,13 +20,18 @@ class PostRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'name',
         'title',
         'slug',
-        'content',
+        'summary',
+        'description',
         'tag',
         'category',
         'cover',
-        'status'
+        'version',
+        'language',
+        'status',
+        'created_by'
     ];
 
     /**

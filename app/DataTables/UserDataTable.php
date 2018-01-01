@@ -19,8 +19,8 @@ class UserDataTable extends DataTable
         $dataTable = new EloquentDataTable($query);
 
         return $dataTable
-            ->addColumn('role', 'admin.users.datatables_roles')
-            ->addColumn('action', 'admin.users.datatables_actions')
+            ->addColumn('role', 'users.datatables_roles')
+            ->addColumn('action', 'users.datatables_actions')
             ->rawColumns(['role', 'action']);
     }
     

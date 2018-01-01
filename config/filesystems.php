@@ -63,6 +63,11 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+        'file-manager' => [
+            'driver' => 'local',
+            'root' => public_path('storage'),
+        ],
+
     ],
 
 ];

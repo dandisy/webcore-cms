@@ -1,5 +1,5 @@
 ## 1. Webcore
-### The Concept
+### Concept
 
     Admin Page - UI Component - Front Page
 
@@ -86,7 +86,7 @@ in http://localhost/webcore-cms/public/oauth-admin
         
     see Glide documentation in http://glide.thephpleague.com
 
-5. Additional Form Builder
+5. Laravel Generator with Additional Form Builder
 
     - Date Time Picker (htmltype = date or datetime)
     - Select2 (all select input will be select2)
@@ -155,6 +155,14 @@ in http://localhost/webcore-cms/public/oauth-admin
 
 
 ## 2. Laravel Generator
+
+Webcore use infyomlabs/laravel-generator, with renamed artisan command for
+more generic, to :
+
+    php artisan generate[.command]:{command} {Model_name} [option]
+
+See infyomlabs/laravel-generator documentation here http://labs.infyom.com/laravelgenerator
+
 ### Perspective :
 
     HUMAN
@@ -163,11 +171,27 @@ in http://localhost/webcore-cms/public/oauth-admin
     
     COMPUTER
     Interface       -   Tools (Worker)              -   Executor
-    Generators\*    -   Common\* and Utils\*        -   Commands\*    
+    Generators\*    -   Common\* and Utils\*        -   Commands\*
     
-### Guidance
+### Usage & Guidance
 
-1. To add HTML type definition, add and edit these :
+1. Webcore usage :
+
+    * As Web CMS :
+    
+        php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin
+
+        php artisan generate:api_scaffold Post --fieldsFile=Post.json --datatables=true --prefix=admin
+
+        php artisan generate:api_scaffold Banner --fieldsFile=Banner.json --datatables=true --prefix=admin
+        
+        php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin
+
+    * As Admin App (no public site in frontend)
+
+        php artisan generate:api_scaffold YourModel --fieldsFile=YourModel.json --datatables=true
+
+2. To add HTML type definition, add and edit these :
     * add stub file in adminlte-templates\templates\scaffold\fields
     * add stub file in adminlte-templates\templates\vuejs\fields
     * edit Utils\HTMLFieldGenerator
@@ -175,7 +199,7 @@ in http://localhost/webcore-cms/public/oauth-admin
     * edit Generators\ViewGenerator
     * edit Generators\VueJs\ViewGenerator
 
-2. To add command, command option, or fields option
+3. To add command, command option, or fields option
     * edit or add Common\\*
     * edit or add Commands\\* (BaseCommand, etc)
         

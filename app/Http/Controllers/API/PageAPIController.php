@@ -24,15 +24,41 @@ class PageAPIController extends AppBaseController
 
     public function __construct(PageRepository $pageRepo)
     {
+        $this->middleware('auth:api');
         $this->pageRepository = $pageRepo;
     }
 
     /**
-     * Display a listing of the Page.
-     * GET|HEAD /pages
-     *
      * @param Request $request
      * @return Response
+     *
+     * @SWG\Get(
+     *      path="/pages",
+     *      summary="Get a listing of the Pages.",
+     *      tags={"Page"},
+     *      description="Get all Pages",
+     *      produces={"application/json"},
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  type="array",
+     *                  @SWG\Items(ref="#/definitions/Page")
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
      */
     public function index(Request $request)
     {
@@ -44,12 +70,42 @@ class PageAPIController extends AppBaseController
     }
 
     /**
-     * Store a newly created Page in storage.
-     * POST /pages
-     *
      * @param CreatePageAPIRequest $request
-     *
      * @return Response
+     *
+     * @SWG\Post(
+     *      path="/pages",
+     *      summary="Store a newly created Page in storage",
+     *      tags={"Page"},
+     *      description="Store Page",
+     *      produces={"application/json"},
+     *      @SWG\Parameter(
+     *          name="body",
+     *          in="body",
+     *          description="Page that should be stored",
+     *          required=false,
+     *          @SWG\Schema(ref="#/definitions/Page")
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  ref="#/definitions/Page"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
      */
     public function store(CreatePageAPIRequest $request)
     {
@@ -61,12 +117,42 @@ class PageAPIController extends AppBaseController
     }
 
     /**
-     * Display the specified Page.
-     * GET|HEAD /pages/{id}
-     *
-     * @param  int $id
-     *
+     * @param int $id
      * @return Response
+     *
+     * @SWG\Get(
+     *      path="/pages/{id}",
+     *      summary="Display the specified Page",
+     *      tags={"Page"},
+     *      description="Get Page",
+     *      produces={"application/json"},
+     *      @SWG\Parameter(
+     *          name="id",
+     *          description="id of Page",
+     *          type="integer",
+     *          required=true,
+     *          in="path"
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  ref="#/definitions/Page"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
      */
     public function show($id)
     {
@@ -81,13 +167,50 @@ class PageAPIController extends AppBaseController
     }
 
     /**
-     * Update the specified Page in storage.
-     * PUT/PATCH /pages/{id}
-     *
-     * @param  int $id
+     * @param int $id
      * @param UpdatePageAPIRequest $request
-     *
      * @return Response
+     *
+     * @SWG\Put(
+     *      path="/pages/{id}",
+     *      summary="Update the specified Page in storage",
+     *      tags={"Page"},
+     *      description="Update Page",
+     *      produces={"application/json"},
+     *      @SWG\Parameter(
+     *          name="id",
+     *          description="id of Page",
+     *          type="integer",
+     *          required=true,
+     *          in="path"
+     *      ),
+     *      @SWG\Parameter(
+     *          name="body",
+     *          in="body",
+     *          description="Page that should be updated",
+     *          required=false,
+     *          @SWG\Schema(ref="#/definitions/Page")
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  ref="#/definitions/Page"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
      */
     public function update($id, UpdatePageAPIRequest $request)
     {
@@ -106,12 +229,42 @@ class PageAPIController extends AppBaseController
     }
 
     /**
-     * Remove the specified Page from storage.
-     * DELETE /pages/{id}
-     *
-     * @param  int $id
-     *
+     * @param int $id
      * @return Response
+     *
+     * @SWG\Delete(
+     *      path="/pages/{id}",
+     *      summary="Remove the specified Page from storage",
+     *      tags={"Page"},
+     *      description="Delete Page",
+     *      produces={"application/json"},
+     *      @SWG\Parameter(
+     *          name="id",
+     *          description="id of Page",
+     *          type="integer",
+     *          required=true,
+     *          in="path"
+     *      ),
+     *      @SWG\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @SWG\Property(
+     *                  property="data",
+     *                  type="string"
+     *              ),
+     *              @SWG\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
      */
     public function destroy($id)
     {
