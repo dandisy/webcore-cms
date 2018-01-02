@@ -67,22 +67,21 @@ in http://localhost/webcore-cms/public/oauth-admin
 
 * As Web CMS :
 
+composer require dandisy/webcore-page
 
-    composer require dandisy/webcore-page
+    and see https://github.com/dandisy/webcore-page for dependency configuration
 
-and see https://github.com/dandisy/webcore-page for dependency configuration
+composer require dandisy/webcore-menu
 
-    composer require dandisy/webcore-menu
+    and see https://github.com/dandisy/webcore-menu for dependency configuration
 
-and see https://github.com/dandisy/webcore-menu for dependency configuration
+php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin
 
-    php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin
+php artisan generate:api_scaffold Post --fieldsFile=Post.json --datatables=true --prefix=admin
 
-    php artisan generate:api_scaffold Post --fieldsFile=Post.json --datatables=true --prefix=admin
+php artisan generate:api_scaffold Banner --fieldsFile=Banner.json --datatables=true --prefix=admin
 
-    php artisan generate:api_scaffold Banner --fieldsFile=Banner.json --datatables=true --prefix=admin
-    
-    php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin
+php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin
 
 * As Admin App (no public site in frontend)
 
