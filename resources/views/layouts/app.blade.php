@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-    <title>WebCORE Platform</title>
+    <title>Webcore Platform</title>
 
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins//font-awesome/css/font-awesome.min.css') }}">
@@ -65,7 +65,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>WebCORE</b>
+                <b>Webcore</b>
             </a>
 
             <!-- Header Navbar -->
@@ -135,7 +135,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2017 <a href="#">WebCORE</a>.</strong> All rights reserved.
+            <strong>Copyright © 2017 <a href="#">Webcore</a>.</strong> All rights reserved.
         </footer>
 
     </div>

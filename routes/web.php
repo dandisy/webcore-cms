@@ -48,10 +48,8 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', 'HomeController@index');
 
-    Route::group(['prefix' => 'admin'], function () {
-        Route::get('menus', function () {
-            return view('admin.menus.index');
-        });
+    Route::get('menu-manager', function () {
+        return view('menu::index');
     });
 
     Route::group(['middleware' => ['role:superadministrator|administrator']], function () {
@@ -78,9 +76,9 @@ Route::get('/img/{path}', function(Filesystem $filesystem, $path) {
 
 })->where('path', '.*');
 
-Route::get('/{uri}/{all?}', 'Widgets\PageController@index')
-    ->where('uri', '(?!img)(?!assets)(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)')
-    ->where('all', '.*');
+// Route::get('/{uri}/{all?}', 'Widgets\PageController@index')
+//     ->where('uri', '(?!img)(?!assets)(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)')
+//     ->where('all', '.*');
 
 Route::get('admin/pages', ['as'=> 'admin.pages.index', 'uses' => 'Admin\PageController@index']);
 Route::post('admin/pages', ['as'=> 'admin.pages.store', 'uses' => 'Admin\PageController@store']);

@@ -63,6 +63,25 @@ then you can access oauth admin panel
 to manage your oauth client 
 in http://localhost/webcore-cms/public/oauth-admin
 
+### Usage
+
+* As Web CMS :
+
+    composer require dandisy/webcore-page
+
+    composer require dandisy/webcore-menu
+
+    php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin
+
+    php artisan generate:api_scaffold Post --fieldsFile=Post.json --datatables=true --prefix=admin
+
+    php artisan generate:api_scaffold Banner --fieldsFile=Banner.json --datatables=true --prefix=admin
+    
+    php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin
+
+* As Admin App (no public site in frontend)
+
+    php artisan generate:api_scaffold YourModel --fieldsFile=YourModel.json --datatables=true
 
 ### Features
 
@@ -173,25 +192,9 @@ See infyomlabs/laravel-generator documentation here http://labs.infyom.com/larav
     Interface       -   Tools (Worker)              -   Executor
     Generators\*    -   Common\* and Utils\*        -   Commands\*
     
-### Usage & Guidance
+### Guidance
 
-1. Webcore usage :
-
-    * As Web CMS :
-    
-        php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin
-
-        php artisan generate:api_scaffold Post --fieldsFile=Post.json --datatables=true --prefix=admin
-
-        php artisan generate:api_scaffold Banner --fieldsFile=Banner.json --datatables=true --prefix=admin
-        
-        php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin
-
-    * As Admin App (no public site in frontend)
-
-        php artisan generate:api_scaffold YourModel --fieldsFile=YourModel.json --datatables=true
-
-2. To add HTML type definition, add and edit these :
+1. To add HTML type definition, add and edit these :
     * add stub file in adminlte-templates\templates\scaffold\fields
     * add stub file in adminlte-templates\templates\vuejs\fields
     * edit Utils\HTMLFieldGenerator
@@ -199,7 +202,7 @@ See infyomlabs/laravel-generator documentation here http://labs.infyom.com/larav
     * edit Generators\ViewGenerator
     * edit Generators\VueJs\ViewGenerator
 
-3. To add command, command option, or fields option
+2. To add command, command option, or fields option
     * edit or add Common\\*
     * edit or add Commands\\* (BaseCommand, etc)
         
