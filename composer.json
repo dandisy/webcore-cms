@@ -7,10 +7,8 @@
     "require": {
         "php": ">=7.0.0",
         "arrilot/laravel-widgets": "^3.7",
-        "atayahmet/laravel-nestable": "^0.8.1",
         "doctrine/dbal": "~2.3",
         "fideloper/proxy": "~3.3",
-        "harimayco/laravel-menu": "^1.2",
         "infinety-es/filemanager": "^2.2",
         "infyomlabs/adminlte-templates": "5.5.x-dev",
         "infyomlabs/laravel-generator": "5.5.x-dev",

@@ -69,7 +69,11 @@ in http://localhost/webcore-cms/public/oauth-admin
 
     composer require dandisy/webcore-page
 
+and see https://github.com/dandisy/webcore-page for dependency configuration
+
     composer require dandisy/webcore-menu
+
+and see https://github.com/dandisy/webcore-menu for dependency configuration
 
     php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin
 
