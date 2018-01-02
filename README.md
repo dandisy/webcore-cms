@@ -67,6 +67,7 @@ in http://localhost/webcore-cms/public/oauth-admin
 
 * As Web CMS :
 
+
     composer require dandisy/webcore-page
 
 and see https://github.com/dandisy/webcore-page for dependency configuration
