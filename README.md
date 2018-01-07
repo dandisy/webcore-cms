@@ -8,7 +8,7 @@ Copy and paste in terminal line by line, just hit Enter key
 
         git clone https://github.com/dandisy/webcore-cms.git
 
-        cd webcore-sample
+        cd webcore-cms
 
         composer install
 
