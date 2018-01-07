@@ -16,6 +16,12 @@
     <p>{!! $presentation->position !!}</p>
 </div>
 
+<!-- Datasource Field -->
+<div class="form-group">
+    {!! Form::label('datasource', 'Datasource:') !!}
+    <p>{!! $presentation->datasource !!}</p>
+</div>
+
 <!-- Order Field -->
 <div class="form-group">
     {!! Form::label('order', 'Order:') !!}

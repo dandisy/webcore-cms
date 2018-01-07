@@ -65,7 +65,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>Webcore</b>
+                <b>WebCORE</b>
             </a>
 
             <!-- Header Navbar -->
@@ -154,7 +154,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{!! url('/') !!}">
+                <a class="navbar-brand" href="{!! url('/admin') !!}">
                     Admin
                 </a>
             </div>

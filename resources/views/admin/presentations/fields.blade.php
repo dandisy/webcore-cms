@@ -10,6 +10,12 @@
     {!! Form::text('position', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Datasource Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('datasource', 'Datasource:') !!}
+    {!! Form::text('datasource', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Order Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('order', 'Order:') !!}

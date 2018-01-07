@@ -42,7 +42,7 @@ trait MakePostTrait
         $fake = Faker::create();
 
         return array_merge([
-            'post' => $fake->word,
+            'name' => $fake->word,
             'title' => $fake->word,
             'slug' => $fake->word,
             'summary' => $fake->text,

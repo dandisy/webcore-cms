@@ -4,7 +4,7 @@
     <p>{!! $page->id !!}</p>
 </div>
 
-<!-- Page Field -->
+<!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
     <p>{!! $page->name !!}</p>

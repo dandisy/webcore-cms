@@ -1,5 +1,44 @@
-# DEPRECATED!
+## Sample of Running Webcore as Website CMS
 
-### Webcore has been made into a single platform for Backend Admin Website or Website CMS or can be built according to your needs
+### Installation
 
-use https://github.com/dandisy/webcore instead
+Copy and paste in terminal line by line, just hit Enter key
+
+* Using Git
+
+        git clone https://github.com/dandisy/webcore-cms.git
+
+        cd webcore-sample
+
+        composer install
+
+        cp .env.example .env
+
+Make sure your server, create "sample" database, edit .env using your favorite editor, 
+for example using nano editor copy and paste this in terminal, and hit Enter key
+
+    sudo nano .env
+
+import sample.sql file included to your database
+
+then
+
+    php artisan key:generate
+
+Now you can browse to
+
+    http://localhost/webcore-cms/public
+    or
+    http://localhost/webcore-cms/public/admin
+
+Default users are
+
+    - superadminstrator@app.com
+    - administrator@app.com
+    - user@app.com
+
+    with default password is password
+
+
+#
+by dandi@redbuzz.co.id

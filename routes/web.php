@@ -76,10 +76,6 @@ Route::get('/img/{path}', function(Filesystem $filesystem, $path) {
 
 })->where('path', '.*');
 
-// Route::get('/{uri}/{all?}', 'Widgets\PageController@index')
-//     ->where('uri', '(?!img)(?!assets)(?!admin)(?!register$)(?!login$)(?!logout$)([A-Za-z0-9\-]+)')
-//     ->where('all', '.*');
-
 Route::get('admin/pages', ['as'=> 'admin.pages.index', 'uses' => 'Admin\PageController@index']);
 Route::post('admin/pages', ['as'=> 'admin.pages.store', 'uses' => 'Admin\PageController@store']);
 Route::get('admin/pages/create', ['as'=> 'admin.pages.create', 'uses' => 'Admin\PageController@create']);

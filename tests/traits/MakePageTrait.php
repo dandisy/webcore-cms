@@ -42,7 +42,7 @@ trait MakePageTrait
         $fake = Faker::create();
 
         return array_merge([
-            'page' => $fake->word,
+            'name' => $fake->word,
             'title' => $fake->word,
             'slug' => $fake->word,
             'summary' => $fake->text,

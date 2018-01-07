@@ -43,6 +43,7 @@ trait MakeBannerTrait
 
         return array_merge([
             'file' => $fake->word,
+            'name' => $fake->word,
             'title' => $fake->word,
             'description' => $fake->text,
             'link' => $fake->word,

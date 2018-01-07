@@ -168,11 +168,8 @@ return [
          * Package Service Providers...
          */
          Prettus\Repository\Providers\RepositoryServiceProvider::class,
-         Nestable\NestableServiceProvider::class,
-         Infinety\FileManager\FileManagerServiceProvider::class,
-
-         // package example
-         Webcore\Timezones\TimezonesServiceProvider::class,
+         Webcore\FileManager\FileManagerServiceProvider::class,
+         //Nestable\NestableServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,7 +228,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Nestable' => Nestable\Facades\NestableService::class,
+        //'Nestable' => Nestable\Facades\NestableService::class,
 
     ],
 

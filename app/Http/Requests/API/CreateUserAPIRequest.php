@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\User;
-use InfyOm\Generator\Request\APIRequest;
+use App\User;
+use Webcore\Generator\Request\APIRequest;
 
 class CreateUserAPIRequest extends APIRequest
 {

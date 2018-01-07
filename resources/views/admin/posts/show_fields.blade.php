@@ -4,7 +4,7 @@
     <p>{!! $post->id !!}</p>
 </div>
 
-<!-- Post Field -->
+<!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
     <p>{!! $post->name !!}</p>

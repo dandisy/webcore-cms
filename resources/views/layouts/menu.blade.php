@@ -8,23 +8,23 @@
 <li class="header">CONTENTS</li>
 
 <li class="{{ Request::is('pages*') ? 'active' : '' }}">
-    <a href="{!! route('admin.pages.index') !!}"><i class="fa fa-edit"></i><span>Pages</span></a>
+    <a href="{!! route('admin.pages.index') !!}"><i class="fa fa-file-text"></i><span>Pages</span></a>
 </li>
 
 <li class="header">COMPONENTS</li>
 
 <li class="{{ Request::is('posts*') ? 'active' : '' }}">
-    <a href="{!! route('admin.posts.index') !!}"><i class="fa fa-edit"></i><span>Posts</span></a>
+    <a href="{!! route('admin.posts.index') !!}"><i class="fa fa-clone"></i><span>Posts</span></a>
 </li>
 
 <li class="{{ Request::is('banners*') ? 'active' : '' }}">
-    <a href="{!! route('admin.banners.index') !!}"><i class="fa fa-edit"></i><span>Banners</span></a>
+    <a href="{!! route('admin.banners.index') !!}"><i class="fa fa-file-image-o"></i><span>Banners</span></a>
 </li>
 
 <li class="header">ARRANGEMENT</li>
 
 <li class="{{ Request::is('presentations*') ? 'active' : '' }}">
-    <a href="{!! route('admin.presentations.index') !!}"><i class="fa fa-edit"></i><span>Presentations</span></a>
+    <a href="{!! route('admin.presentations.index') !!}"><i class="fa fa-newspaper-o"></i><span>Presentations</span></a>
 </li>
 
 <li class="header">MANAGEMENT</li>
