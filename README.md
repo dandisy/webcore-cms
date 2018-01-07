@@ -39,6 +39,26 @@ Default users are
 
     with default password is password
 
+### Screenshots
+
+* Sample front page
+
+![sample front page](https://github.com/dandisy/webcore-screenshots/blob/master/sample%20front%20page.png)
+
+* Login page
+
+![login page](https://github.com/dandisy/webcore-screenshots/blob/master/login%20page.png)
+
+* Admin page
+
+![admin page 1](https://github.com/dandisy/webcore-screenshots/blob/master/admin%20page%201.png)
+
+![admin page 2](https://github.com/dandisy/webcore-screenshots/blob/master/admin%20page%202.png)
+
+![admin page 3](https://github.com/dandisy/webcore-screenshots/blob/master/admin%20page%203.png)
+
+![admin page 4](https://github.com/dandisy/webcore-screenshots/blob/master/admin%20page%204.png)
+
 
 #
 by dandi@redbuzz.co.id
