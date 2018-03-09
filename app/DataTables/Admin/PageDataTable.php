@@ -65,17 +65,14 @@ class PageDataTable extends DataTable
     {
         return [
             'id',
-            'name',
             'title',
             'slug',
-            'summary',
-            'description',
             'tag',
             'version',
             'language',
             'template',
             'status',
-            'created_by'
+            'updated_by'
         ];
     }
 

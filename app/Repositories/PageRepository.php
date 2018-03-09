@@ -8,7 +8,7 @@ use Webcore\Generator\Common\BaseRepository;
 /**
  * Class PageRepository
  * @package App\Repositories
- * @version January 4, 2018, 3:30 am UTC
+ * @version March 8, 2018, 4:20 pm UTC
  *
  * @method Page findWithoutFail($id, $columns = ['*'])
  * @method Page find($id, $columns = ['*'])
@@ -28,7 +28,8 @@ class PageRepository extends BaseRepository
         'language',
         'template',
         'status',
-        'created_by'
+        'created_by',
+        'updated_by'
     ];
 
     /**

@@ -64,18 +64,14 @@ class PostDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'name',
             'title',
-            'slug',
-            'summary',
-            'description',
             'tag',
             'category',
             'cover',
             'version',
             'language',
             'status',
-            'created_by'
+            'updated_by'
         ];
     }
 
