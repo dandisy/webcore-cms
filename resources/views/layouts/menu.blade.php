@@ -54,34 +54,40 @@
     !Request::is('permissions*') and
     !Request::is('settings*')
     )
-<li class="header">CONTENTS</li>
+<li class="header">MANAGEMENT</li>
 
-{{--<li class="{{ Request::is('menu-manager*') ? 'active' : '' }}">
+<li class="{{ Request::is('menu-manager*') ? 'active' : '' }}">
     <a href="{!! url('menu-manager') !!}"><i class="fa fa-bars"></i><span>Menus</span></a>
-</li>--}}
+</li>
+
+<li class="header">CONTENTS</li>
 
 <li class="{{ Request::is('pages*') ? 'active' : '' }}">
     <a href="{!! route('admin.pages.index') !!}"><i class="fa fa-edit"></i><span>Pages</span></a>
-</li>
-
-<li class="{{ Request::is('presentations*') ? 'active' : '' }}">
-    <a href="{!! route('admin.presentations.index') !!}"><i class="fa fa-edit"></i><span>Presentations</span></a>
 </li>
 
 <li class="{{ Request::is('posts*') ? 'active' : '' }}">
     <a href="{!! route('admin.posts.index') !!}"><i class="fa fa-edit"></i><span>Posts</span></a>
 </li>
 
-<li class="{{ Request::is('dataQueries*') ? 'active' : '' }}">
-    <a href="{!! route('admin.dataQueries.index') !!}"><i class="fa fa-edit"></i><span>Data Queries</span></a>
+<li class="header">LAYOUTS</li>
+
+<li class="{{ Request::is('presentations*') ? 'active' : '' }}">
+    <a href="{!! route('admin.presentations.index') !!}"><i class="fa fa-edit"></i><span>Presentations</span></a>
 </li>
+
+<li class="{{ Request::is('components*') ? 'active' : '' }}">
+    <a href="{!! route('admin.components.index') !!}"><i class="fa fa-edit"></i><span>Components</span></a>
+</li>
+
+<li class="header">DATA</li>
 
 <li class="{{ Request::is('dataSources*') ? 'active' : '' }}">
     <a href="{!! route('admin.dataSources.index') !!}"><i class="fa fa-edit"></i><span>Data Sources</span></a>
 </li>
 
-<li class="{{ Request::is('components*') ? 'active' : '' }}">
-    <a href="{!! route('admin.components.index') !!}"><i class="fa fa-edit"></i><span>Components</span></a>
+<li class="{{ Request::is('dataQueries*') ? 'active' : '' }}">
+    <a href="{!! route('admin.dataQueries.index') !!}"><i class="fa fa-edit"></i><span>Data Queries</span></a>
 </li>
 
 <li class="{{ Request::is('dataColumns*') ? 'active' : '' }}">
