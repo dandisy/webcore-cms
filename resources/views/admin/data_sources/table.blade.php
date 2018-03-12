@@ -10,8 +10,6 @@
 
     // add by dandisy
     <script>
-		$("#dataTableBuilder_wrapper .dt-buttons .btn").removeClass('btn-default');
-		$("#dataTableBuilder_wrapper .dt-buttons .btn").addClass('btn-warning');
         $('#dataTableBuilder thead').append('<tr class="column-search"></tr>');
         $('#dataTableBuilder thead th').each(function() {
             var title = $(this).text();
