@@ -43,6 +43,8 @@ class DataSourceController extends AppBaseController
     public function create()
     {
         // add by dandisy
+        $dataquery = \App\Models\DataQuery::all();
+        $datacolumn = \App\Models\DataColumn::all();
         
 $models = array_map(function ($file) {
             $fileName = explode('.', $file);
@@ -56,6 +58,8 @@ $models = array_map(function ($file) {
         // edit by dandisy
         //return view('admin.data_sources.create');
         return view('admin.data_sources.create')
+            ->with('dataquery', $dataquery)
+            ->with('datacolumn', $datacolumn)
             ->with('models', $models);
     }
 
@@ -109,6 +113,8 @@ $models = array_map(function ($file) {
     public function edit($id)
     {
         // add by dandisy
+        $dataquery = \App\Models\DataQuery::all();
+        $datacolumn = \App\Models\DataColumn::all();
         
 $models = array_map(function ($file) {
             $fileName = explode('.', $file);
@@ -131,6 +137,8 @@ $models = array_map(function ($file) {
         //return view('admin.data_sources.edit')->with('dataSource', $dataSource);
         return view('admin.data_sources.edit')
             ->with('dataSource', $dataSource)
+            ->with('dataquery', $dataquery)
+            ->with('datacolumn', $datacolumn)
             ->with('models', $models);
     }
 

@@ -8,7 +8,7 @@ use Webcore\Generator\Common\BaseRepository;
 /**
  * Class DataQueryRepository
  * @package App\Repositories
- * @version March 8, 2018, 5:02 pm UTC
+ * @version March 12, 2018, 7:27 am UTC
  *
  * @method DataQuery findWithoutFail($id, $columns = ['*'])
  * @method DataQuery find($id, $columns = ['*'])

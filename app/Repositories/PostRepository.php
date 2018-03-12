@@ -8,7 +8,7 @@ use Webcore\Generator\Common\BaseRepository;
 /**
  * Class PostRepository
  * @package App\Repositories
- * @version March 8, 2018, 4:24 pm UTC
+ * @version March 12, 2018, 7:22 am UTC
  *
  * @method Post findWithoutFail($id, $columns = ['*'])
  * @method Post find($id, $columns = ['*'])

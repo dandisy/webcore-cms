@@ -156,5 +156,9 @@ class Post extends Model
         'status' => 'required'
     ];
 
+    public function getTableColumns() {
+        return $this->getConnection()->getSchemaBuilder()->getColumnListing($this->getTable());
+    }
+
     
 }

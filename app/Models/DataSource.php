@@ -98,20 +98,18 @@ class DataSource extends Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function dataQuery()
+    public function dataQueries()
     {
-        return $this->hasMany(\App\Models\DataQuery::class);
+        return $this->hasMany(\App\Models\DataQuery::class, 'data_source_id');
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function dataColumn()
+    public function dataColumns()
     {
-        return $this->hasMany(\App\Models\DataColumn::class);
+        return $this->hasMany(\App\Models\DataColumn::class, 'data_source_id');
     }
-
-    
 }
