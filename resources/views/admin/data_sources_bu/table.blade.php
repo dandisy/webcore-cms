@@ -10,19 +10,16 @@
 
     // add by dandisy
     <script>
-		$("#dataTableBuilder_wrapper .dt-buttons .btn").removeClass('btn-default');
-		$("#dataTableBuilder_wrapper .dt-buttons .btn").addClass('btn-warning');
         $('#dataTableBuilder thead').append('<tr class="column-search"></tr>');
         $('#dataTableBuilder thead th').each(function() {
             var title = $(this).text();
             if(title === 'Action') {
                 $('.column-search').append('<td></td>');
             } else {
-                $('.column-search').append('<td><input type="text" placeholder="Search '+title+'" class="form-control" /></td>');
+                $('.column-search').append('<td><input type="text" placeholder="Search '+title+'" /></td>');
             }
         });
 
-		$("#dataTableBuilder_filter").remove();
         var table = $('#dataTableBuilder').DataTable();
 
         var idx = 0;

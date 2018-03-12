@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Presentation;
 use App\DataTables\Admin\PageDataTable;
-use App\Http\Requests\Admin;
+use App\Http\Requests;
 use App\Http\Requests\Admin\CreatePageRequest;
 use App\Http\Requests\Admin\UpdatePageRequest;
 use App\Repositories\PageRepository;
+use App\Repositories\PresentationRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
@@ -18,10 +20,11 @@ class PageController extends AppBaseController
     /** @var  PageRepository */
     private $pageRepository;
 
-    public function __construct(PageRepository $pageRepo)
+    public function __construct(PageRepository $pageRepo, PresentationRepository $presentationRepo)
     {
         $this->middleware('auth');
         $this->pageRepository = $pageRepo;
+        $this->presentationRepository = $presentationRepo;
     }
 
     /**
@@ -43,9 +46,10 @@ class PageController extends AppBaseController
     public function create()
     {
         // add by dandisy
-        $presentation = \App\Models\Presentation::all();
+        //$presentation = \App\Models\Presentation::all();
+        $component = \App\Models\Component::all();
         
-$themes = array_map(function ($file) {
+        $themes = array_map(function ($file) {
             $fileName = explode('.', $file);
             if(count($fileName) > 0) {
                 return $fileName[0];
@@ -57,7 +61,7 @@ $themes = array_map(function ($file) {
         // edit by dandisy
         //return view('admin.pages.create');
         return view('admin.pages.create')
-            ->with('presentation', $presentation)
+            ->with('component', $component)
             ->with('themes', $themes);
     }
 
@@ -72,9 +76,50 @@ $themes = array_map(function ($file) {
     {
         $input = $request->all();
 
+        // handling presentation data
+        $present = array_merge_recursive(
+            array_key_exists('media', $input) ? $input['media'] : [], 
+            array_key_exists('component_id', $input) ? $input['component_id'] : [], 
+            array_key_exists('position', $input) ? $input['position'] : [], 
+            array_key_exists('order', $input) ? $input['order'] : []
+        );
+
+        unset($input['media']);
+        if(array_key_exists('media', $input)) {
+            unset($input['media']);
+        }
+        if(array_key_exists('component_id', $input)) {
+            unset($input['component_id']);
+        }
+        if(array_key_exists('position', $input)) {
+            unset($input['position']);
+        }
+        if(array_key_exists('order', $input)) {
+            unset($input['order']);
+        }
+        // end handling presentation data
+
         $input['created_by'] = Auth::user()->id;
 
         $page = $this->pageRepository->create($input);
+
+        // handling presentation data
+        foreach($present as $item) {
+            $present = array_map(function ($val) {
+                if (is_array($val)) {
+                    return implode(',', $val);
+                }
+        
+                return $val;
+            }, $item);
+
+            $present['page_id'] = $page->id;
+
+            $present['created_by'] = Auth::user()->id;
+
+            $this->presentationRepository->create($present);
+        }
+        // end handling presentation data
 
         Flash::success('Page saved successfully.');
 
@@ -111,9 +156,10 @@ $themes = array_map(function ($file) {
     public function edit($id)
     {
         // add by dandisy
-        $presentation = \App\Models\Presentation::all();
+        $presentation = \App\Models\Presentation::with('component')->where('page_id', $id)->get();
+        $component = \App\Models\Component::all();
         
-$themes = array_map(function ($file) {
+        $themes = array_map(function ($file) {
             $fileName = explode('.', $file);
             if(count($fileName) > 0) {
                 return $fileName[0];
@@ -135,6 +181,7 @@ $themes = array_map(function ($file) {
         return view('admin.pages.edit')
             ->with('page', $page)
             ->with('presentation', $presentation)
+            ->with('component', $component)
             ->with('themes', $themes);
     }
 
@@ -149,6 +196,60 @@ $themes = array_map(function ($file) {
     public function update($id, UpdatePageRequest $request)
     {
         $input = $request->all();
+
+        // handling presentation data
+        $present = array_merge_recursive(
+            array_key_exists('media', $input) ? $input['media'] : [], 
+            array_key_exists('component_id', $input) ? $input['component_id'] : [], 
+            array_key_exists('position', $input) ? $input['position'] : [], 
+            array_key_exists('order', $input) ? $input['order'] : []
+        );
+
+        unset($input['media']);
+        if(array_key_exists('media', $input)) {
+            unset($input['media']);
+        }
+        if(array_key_exists('component_id', $input)) {
+            unset($input['component_id']);
+        }
+        if(array_key_exists('position', $input)) {
+            unset($input['position']);
+        }
+        if(array_key_exists('order', $input)) {
+            unset($input['order']);
+        }
+
+        $presentUpdated = [];
+        foreach($present as $item) {
+            $present = array_map(function ($val) {
+                if (is_array($val)) {
+                    return implode(',', $val);
+                }
+        
+                return $val;
+            }, $item);
+
+            if(array_key_exists('index', $item)) {
+                $present['updated_by'] = Auth::user()->id;
+
+                $this->presentationRepository->update($present, $item['index']);
+
+                array_push($presentUpdated, $item['index']);
+            } else {
+                $present['page_id'] = $id;
+
+                $present['created_by'] = Auth::user()->id;
+
+                $newPresentation = $this->presentationRepository->create($present);
+
+                array_push($presentUpdated, $newPresentation->id);
+            }
+        }
+
+        if($presentUpdated) {
+            Presentation::where('page_id', $id)->whereNotIn('id', $presentUpdated )->delete();
+        }
+        // end handling presentation data
 
         $input['updated_by'] = Auth::user()->id;
 

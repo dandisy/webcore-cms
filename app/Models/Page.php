@@ -149,6 +149,10 @@ class Page extends Model
         'status' => 'required'
     ];
 
+    public function getTableColumns() {
+        return $this->getConnection()->getSchemaBuilder()->getColumnListing($this->getTable());
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/

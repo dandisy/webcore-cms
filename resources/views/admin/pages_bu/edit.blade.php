@@ -1,57 +1,12 @@
 @extends('layouts.app')
 
-@section('css')
-    <style>
-        table textarea.form-control {
-            height: 234px;
-        }
-        tbody tr td {
-            position: relative;
-        }
-        tbody .btn-group-query {
-            position: absolute;
-            bottom: 8px;
-            /*padding: 0 8px;*/
-            width: 100%;
-            right: 0;
-        }
-        tbody .btn-group-query .form-group {
-            padding-right: 0;
-            margin-left: 0;
-        }
-        table .select2 {
-            width: 100% !important;
-        }
-        tbody tr td:first-child,
-        tbody tr td:nth-child(2) {
-            width: 43%;
-        }
-        tbody tr td:nth-child(3) {
-            width: 14%;
-        }
-        .input-group {
-            width: 100%;
-        }
-        .input-group-addon {
-            width: 13%;
-            text-align: left;
-        }
-        .input-group .form-control {
-            width: 100%;
-        }
-        #column-alias .input-group {
-            margin-bottom: 5px;
-        }
-    </style>
-@endsection
-
 @section('content')
     <section class="content-header">
         <h1>
-            Data Source
+            Page
         </h1>
         {{--<h1 class="pull-left">
-            Data Source
+            Page
         </h1>
         <div class="pull-right">
             <!-- Version Field -->
@@ -93,9 +48,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($dataSource, ['route' => ['admin.dataSources.update', $dataSource->id], 'method' => 'patch']) !!}
+                   {!! Form::model($page, ['route' => ['admin.pages.update', $page->id], 'method' => 'patch']) !!}
 
-                        @include('admin.data_sources.fields')
+                        @include('admin.pages.fields')
 
                    {!! Form::close() !!}
                </div>
