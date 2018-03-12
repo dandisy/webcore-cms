@@ -1,4 +1,9 @@
-## Sample of Running Webcore as Website CMS
+## Ready to Use Webcore as Website CMS
+
+This is Webcore Sample already relayout pages and data sources form for better user experience, 
+
+using https://github.com/dandisy/webcore-presentation
+
 
 ### Installation
 
@@ -14,7 +19,7 @@ Copy and paste in terminal line by line, just hit Enter key
 
         cp .env.example .env
 
-Make sure your server, create "sample" database, edit .env using your favorite editor, 
+Make sure your server, create "webcore-cms" database, edit .env using your favorite editor, 
 for example using nano editor copy and paste this in terminal, and hit Enter key
 
     sudo nano .env
