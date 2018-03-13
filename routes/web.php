@@ -18,8 +18,8 @@ use Illuminate\Contracts\Filesystem\Filesystem;
 */
 
 Route::get('/', function () {
-    // return redirect('home');
-    return view('welcome');
+    return redirect('home');
+    // return view('welcome');
 });
 
 
