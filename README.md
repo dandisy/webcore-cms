@@ -24,7 +24,7 @@ for example using nano editor copy and paste this in terminal, and hit Enter key
 
     sudo nano .env
 
-import sample.sql file included to your database
+import "webcore-cms.sql file included to your database
 
 then
 
