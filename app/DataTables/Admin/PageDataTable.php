@@ -74,7 +74,7 @@ class PageDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'id',
+            'name',
             'title',
             'slug',
             'tag',

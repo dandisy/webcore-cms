@@ -63,35 +63,35 @@
 <li class="header">CONTENTS</li>
 
 <li class="{{ Request::is('pages*') ? 'active' : '' }}">
-    <a href="{!! route('admin.pages.index') !!}"><i class="fa fa-edit"></i><span>Pages</span></a>
+    <a href="{!! route('admin.pages.index') !!}"><i class="fa fa-square"></i><span>Pages</span></a>
 </li>
 
 <li class="{{ Request::is('posts*') ? 'active' : '' }}">
-    <a href="{!! route('admin.posts.index') !!}"><i class="fa fa-edit"></i><span>Posts</span></a>
+    <a href="{!! route('admin.posts.index') !!}"><i class="fa fa-sticky-note"></i><span>Posts</span></a>
 </li>
 
 <li class="header">LAYOUTS</li>
 
 <li class="{{ Request::is('presentations*') ? 'active' : '' }}">
-    <a href="{!! route('admin.presentations.index') !!}"><i class="fa fa-edit"></i><span>Presentations</span></a>
+    <a href="{!! route('admin.presentations.index') !!}"><i class="fa fa-sitemap"></i><span>Presentations</span></a>
 </li>
 
 <li class="{{ Request::is('components*') ? 'active' : '' }}">
-    <a href="{!! route('admin.components.index') !!}"><i class="fa fa-edit"></i><span>Components</span></a>
+    <a href="{!! route('admin.components.index') !!}"><i class="fa fa-paperclip"></i><span>Components</span></a>
 </li>
 
 <li class="header">DATA</li>
 
 <li class="{{ Request::is('dataSources*') ? 'active' : '' }}">
-    <a href="{!! route('admin.dataSources.index') !!}"><i class="fa fa-edit"></i><span>Data Sources</span></a>
+    <a href="{!! route('admin.dataSources.index') !!}"><i class="fa fa-database"></i><span>Data Sources</span></a>
 </li>
 
 <li class="{{ Request::is('dataQueries*') ? 'active' : '' }}">
-    <a href="{!! route('admin.dataQueries.index') !!}"><i class="fa fa-edit"></i><span>Data Queries</span></a>
+    <a href="{!! route('admin.dataQueries.index') !!}"><i class="fa fa-share-alt"></i><span>Data Queries</span></a>
 </li>
 
 <li class="{{ Request::is('dataColumns*') ? 'active' : '' }}">
-    <a href="{!! route('admin.dataColumns.index') !!}"><i class="fa fa-edit"></i><span>Data Columns</span></a>
+    <a href="{!! route('admin.dataColumns.index') !!}"><i class="fa fa-table"></i><span>Data Columns</span></a>
 </li>
 @endif
 

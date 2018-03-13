@@ -1,8 +1,10 @@
-{{--<!-- Name Field -->
+<!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('name', 'Name:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
-</div>--}}
+</div>
+
+<div class="clearfix"></div>
 
 <!-- Title Field -->
 <div class="form-group col-sm-6">
@@ -11,16 +13,16 @@
 </div>
 
 <!-- Slug Field -->
-<div class="form-group col-sm-6" style="visibility:hidden">
+<div class="form-group col-sm-6">
     {!! Form::label('slug', 'Slug:') !!}
     {!! Form::text('slug', null, ['class' => 'form-control']) !!}
 </div>
 
-{{--<!-- Summary Field -->
+<!-- Summary Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('summary', 'Summary:') !!}
     {!! Form::textarea('summary', null, ['class' => 'form-control']) !!}
-</div>--}}
+</div>
 
 <!-- Description Field -->
 <div class="form-group col-sm-12 col-lg-12">
@@ -34,7 +36,7 @@
     {!! Form::text('tag', null, ['class' => 'form-control']) !!}
 </div>
 
-{{--<!-- Version Field -->
+<!-- Version Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('version', 'Version:') !!}
     {!! Form::text('version', null, ['class' => 'form-control']) !!}
@@ -44,7 +46,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('language', 'Language:') !!}
     {!! Form::text('language', null, ['class' => 'form-control']) !!}
-</div>--}}
+</div>
 
 <!-- Template Field -->
 <div class="form-group col-sm-6">

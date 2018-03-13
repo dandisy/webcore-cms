@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Webcore CMS</title>
+    <title>Basic Webcore Theme</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugins/font-awesome/css/font-awesome.min.css') }}">
@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <!--Branding Image-->
-                <a class="navbar-brand" href="#">Webcore CMS</a>
+                <a class="navbar-brand" href="#">Basic</a>
             </div>
         </div>
     </nav>

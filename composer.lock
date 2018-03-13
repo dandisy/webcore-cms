@@ -447,12 +447,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dandisy/webcore-page.git",
-                "reference": "bab1ced2a10a5635b885e83fd358fa836e25a720"
+                "reference": "18b181768cb552f3e47cd458bcb2b77d680667ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dandisy/webcore-page/zipball/bab1ced2a10a5635b885e83fd358fa836e25a720",
-                "reference": "bab1ced2a10a5635b885e83fd358fa836e25a720",
+                "url": "https://api.github.com/repos/dandisy/webcore-page/zipball/18b181768cb552f3e47cd458bcb2b77d680667ab",
+                "reference": "18b181768cb552f3e47cd458bcb2b77d680667ab",
                 "shasum": ""
             },
             "require": {
@@ -479,7 +479,7 @@
                 }
             ],
             "description": "Page system for webcore platform",
-            "time": "2018-03-12T18:22:36+00:00"
+            "time": "2018-03-13T03:17:50+00:00"
         },
         {
             "name": "defuse/php-encryption",
