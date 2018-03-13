@@ -263,7 +263,11 @@ class DataSourceController extends AppBaseController
         // get all column name of table
         $columns = [];
         if(isset($dataSource->model)) {
-            $modelName = $dataSource->model;
+            if(stristr($dataSource->model, '/')) {
+                $modelName = str_replace('/', '\\', $dataSource->model);
+            } else {
+                $modelName = $dataSource->model;
+            }
             $modelFQNS = 'App\Models\\'.$modelName;
 
             $model = new $modelFQNS();
@@ -279,14 +283,25 @@ class DataSourceController extends AppBaseController
 
                 foreach($relations as $relation) {
                     $relValue = explode(',', $relation['value']);
-                    if(stristr($relValue[0], ' AS ')) {
-                        // if using AS (table alias)
-                        $joinNM = explode(' ', $relValue[0]);
-
-                        $joinModelName = $joinNM[0];
+                    if(stristr($relValue[0], '/')) {
+                        $joinModule = explode('/', $relValue[0]);
+                        $joinModelNS = $joinModule[0];
+                        $joinModelName = $joinModule[1];
                     } else {
                         $joinModelName = $relValue[0];
                     }
+
+                    if(stristr($joinModelName, ' AS ')) {
+                        // if using AS (table alias)
+                        $joinNM = explode(' ', $joinModelName);
+
+                        $joinModelName = $joinNM[0];
+                    }
+
+                    if(isset($joinModelNS)) {
+                        $joinModelName = $joinModelNS.'\\'.$joinModelName;
+                    }
+
                     $joinModelFQNS = 'App\Models\\'.$joinModelName;
 
                     $joinModel = new $joinModelFQNS();
@@ -294,6 +309,10 @@ class DataSourceController extends AppBaseController
                     $joinColumns = $joinModel->getTableColumns();
 
                     $joinColumns = array_map(function($value) use ($joinModel, $relValue) {
+                        if(isset($joinNM[2])) {
+                            return $joinNM[2].'.'.$value;
+                        }
+                        
                         if(isset($relValue[3])) {
                             return $relValue[3].'.'.$value;
                         }
