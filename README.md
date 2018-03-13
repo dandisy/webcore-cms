@@ -56,7 +56,11 @@ Default users are
 
 * Admin page
 
-![admin page 1](https://github.com/dandisy/webcore-screenshots/blob/master/admin%20page%201.png)
+![Webcore Admin Dashboard](https://github.com/dandisy/webcore-screenshots/blob/master/webcore-admin-dashboard.jpg)
+
+![Webcore Page Presentation](https://github.com/dandisy/webcore-screenshots/blob/master/webcore-admin-page-presentation.jpg)
+
+![Webcore Datasource Elogui](https://github.com/dandisy/webcore-screenshots/blob/master/webcore-admin-datasource-elogui.jpg)
 
 ![admin page 2](https://github.com/dandisy/webcore-screenshots/blob/master/admin%20page%202.png)
 
