@@ -1,8 +1,8 @@
 ## Ready to Use Webcore as Website CMS
 
-This is Webcore Sample already relayout pages and data sources form for better user experience, 
+This is Webcore Sample already relayouted in pages and data sources form for better user experience, 
 
-using https://github.com/dandisy/elogui
+using https://github.com/dandisy/elogui or https://github.com/dandisy/webcore-presentation
 
 
 ### Installation
