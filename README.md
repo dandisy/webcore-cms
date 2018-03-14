@@ -2,7 +2,7 @@
 
 This is Webcore Sample already relayout pages and data sources form for better user experience, 
 
-using https://github.com/dandisy/webcore-presentation
+using https://github.com/dandisy/elogui
 
 
 ### Installation
