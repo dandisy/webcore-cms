@@ -485,13 +485,13 @@ class DataSourceController extends AppBaseController
     
                         array_push($aliasUpdated, $newAlias->id);
                     } else {
-                        ColumnAlias::where('data_source_id', $id)->delete();
+                        DataColumn::where('data_source_id', $id)->delete();
                     }
                 }
             }
 
             if($aliasUpdated) {
-                ColumnAlias::where('data_source_id', $id)->whereNotIn('id', $aliasUpdated)->delete();
+                DataColumn::where('data_source_id', $id)->whereNotIn('id', $aliasUpdated)->delete();
             }
         }
         // end handling data columns

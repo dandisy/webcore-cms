@@ -1,4 +1,4 @@
-@if($display === 'toArray')
+@if($showData === 'toArray')
     @if($key and isset($items[$key]))
         {{dd($items[$key]->toArray())}}
     @else
@@ -13,19 +13,19 @@
 @endif
 
 <pre>
-@if($display === 'print_r')
+@if($showData === 'print_r')
     @if($key and isset($items[$key]))
         {{print_r($items[$key])}}
     @else
         {{print_r($items)}}
     @endif
-@elseif($display === 'var_dump')
+@elseif($showData === 'var_dump')
     @if($key and isset($items[$key]))
         {{var_dump($items[$key])}}
     @else
         {{var_dump($items)}}
     @endif
-@elseif($display === 'var_export')
+@elseif($showData === 'var_export')
     @if($key and isset($items[$key]))
         {{var_export($items[$key])}}
     @else

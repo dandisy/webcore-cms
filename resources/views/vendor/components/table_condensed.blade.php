@@ -1,12 +1,14 @@
-<h3>{{ $items['presentations'][0]['component']['data_source']['description'] }}</h3>
+<h3>{{ $items['page']['title'] }}</h3>
 
-<div style="margin-bottom:15px">
-  <span class="fa fa-calendar"></span> Filter
-</div>
-
-<div class="table-responsive">
+<div class="table-responsive" style="overflow-x: auto">
   <table class="table table-condensed">
-    @foreach ($data as $item)
+      <tr>
+          @foreach ($items['data']->first()->first()->toArray() as $key => $val)
+              <th>{{$key}}</th>
+          @endforeach
+      </tr>
+
+    @foreach ($items['data']->first() as $item)
       <tr>
         @foreach ($item->toArray() as $val)
           <td>{{$val}}</td>
